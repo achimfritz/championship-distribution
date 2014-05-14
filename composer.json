@@ -17,10 +17,6 @@
          },
          {
             "type": "vcs",
-            "url": "git://git.typo3.org/Packages/TYPO3.Twitter.Bootstrap.git"
-         },
-         {
-            "type": "vcs",
             "url": "https://github.com/svparijs/TYPO3.AccountManagement.git"
          }
          
@@ -34,8 +30,7 @@
          "doctrine/migrations": "@dev",
          "achimfritz/championship": "dev-master",
          "achimfritz/championship-import": "dev-master",
-         "typo3/accountmanagement": "@dev",
-         "typo3/twitter-bootstrap": "dev-master"
+         "typo3/accountmanagement": "@dev"
       },
       "require-dev": {
          "typo3/kickstart": "2.0.*",

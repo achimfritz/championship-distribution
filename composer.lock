@@ -1015,29 +1015,6 @@
             ],
             "description": "A PHP implementation of the OASIS Customer Information Quality (CIQ) XML Standard.",
             "time": "2013-12-10 15:20:40"
-        },
-        {
-            "name": "typo3/twitter-bootstrap",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git://git.typo3.org/Packages/TYPO3.Twitter.Bootstrap.git",
-                "reference": "0cffa95f614c43ecf7e54e5ce180e9121648d41e"
-            },
-            "require": {
-                "typo3/flow": "*"
-            },
-            "type": "typo3-flow-package",
-            "autoload": {
-                "psr-0": {
-                    "TYPO3\\Twitter\\Bootstrap": "Classes"
-                }
-            },
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Packaged for use with TYPO3 Flow",
-            "time": "2014-02-13 13:59:26"
         }
     ],
     "packages-dev": [
@@ -1126,9 +1103,7 @@
         "doctrine/migrations": 20,
         "achimfritz/championship": 20,
         "achimfritz/championship-import": 20,
-        "typo3/accountmanagement": 20,
-        "typo3/twitter-bootstrap": 20,
-        "comensee/jquery-ui": 20
+        "typo3/accountmanagement": 20
     },
     "platform": [
 
