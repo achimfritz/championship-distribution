@@ -35,7 +35,7 @@
          "achimfritz/championship": "dev-master",
          "achimfritz/championship-import": "dev-master",
          "typo3/accountmanagement": "@dev",
-         "typo3/twitter-bootstrap": "dev-master",
+         "typo3/twitter-bootstrap": "dev-master"
       },
       "require-dev": {
          "typo3/kickstart": "2.0.*",
