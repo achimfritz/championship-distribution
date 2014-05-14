@@ -1,0 +1,13 @@
+2.0.0
+	-> installation, configuration and migration should fit, remove all dev commit, cleanup branches
+2.0.x
+	-> fixex
+
+2.1.0
+	-> accountRequest
+2.2.0
+	-> experts
+
+3.0.0
+	-> cleanup tips.js, rest stuff and ActionController json stuff
+	-> error handler stuff (500, 400)

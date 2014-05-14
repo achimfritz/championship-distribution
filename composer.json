@@ -1,0 +1,50 @@
+{
+   "name": "achim-fritz/champion-ship-distriubtion",
+      "description" : "Achim Fritz ChampionShip Distribution",
+      "license": "LGPL-3.0+",
+      "repositories": [
+         {
+            "type": "composer",
+            "url": "http://ci.typo3.robertlemke.net/job/composer-packages/ws/repository/"
+         },
+         {
+            "type": "vcs",
+            "url": "git@github.com:achimfritz/AchimFritz.ChampionShip.git"
+         },
+         {
+            "type": "vcs",
+            "url": "git@github.com:achimfritz/AchimFritz.ChampionShip.Import.git"
+         },
+         {
+            "type": "vcs",
+            "url": "git://git.typo3.org/Packages/TYPO3.Twitter.Bootstrap.git"
+         },
+         {
+            "type": "vcs",
+            "url": "https://github.com/svparijs/TYPO3.AccountManagement.git"
+         }
+         
+      ],
+      "config": {
+         "vendor-dir": "Packages/Libraries",
+         "bin-dir": "bin"
+      },
+      "require": {
+         "typo3/flow": "2.0.*",
+         "doctrine/migrations": "@dev",
+         "achimfritz/championship": "dev-master",
+         "achimfritz/championship-import": "dev-master",
+         "typo3/accountmanagement": "@dev",
+         "typo3/twitter-bootstrap": "dev-master",
+			"comensee/jquery-ui": "dev-master"
+      },
+      "require-dev": {
+         "typo3/kickstart": "2.0.*",
+         "typo3/buildessentials": "2.0.*",
+         "mikey179/vfsstream": "1.1.*"
+      },
+      "scripts": {
+         "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+         "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall"
+      }
+}

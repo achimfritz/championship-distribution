@@ -1,0 +1,12 @@
+/Configuration/
+/Data/
+/Packages/
+/Web/
+/bin/
+/Readme.txt
+/Upgrading.txt
+/flow
+/flow.bat
+.buildpath
+.project
+/Build
