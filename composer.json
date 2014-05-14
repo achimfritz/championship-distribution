@@ -36,7 +36,6 @@
          "achimfritz/championship-import": "dev-master",
          "typo3/accountmanagement": "@dev",
          "typo3/twitter-bootstrap": "dev-master",
-			"comensee/jquery-ui": "dev-master"
       },
       "require-dev": {
          "typo3/kickstart": "2.0.*",
