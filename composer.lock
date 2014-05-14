@@ -64,32 +64,6 @@
             "time": "2014-05-10 11:12:57"
         },
         {
-            "name": "comensee/jquery-ui",
-            "version": "dev-master",
-            "target-dir": "CNSEE/JQueryUiBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/comensee/jquery-ui.git",
-                "reference": "3c46ffd21996c3bad129ff15c2d82d65774c2a2c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/comensee/jquery-ui/zipball/3c46ffd21996c3bad129ff15c2d82d65774c2a2c",
-                "reference": "3c46ffd21996c3bad129ff15c2d82d65774c2a2c",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Alain Bangoula",
-                    "email": "alain.bangoula@come-n-see.fr"
-                }
-            ],
-            "description": "Simple Bundle with composer.json added",
-            "time": "2012-10-19 16:29:29"
-        },
-        {
             "name": "composer/installers",
             "version": "v1.0.13",
             "source": {
