@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6eb41b1f78441538c27205ad554da13c",
+    "hash": "ec477ad2081f6b3882202e625a08eb7d",
     "packages": [
         {
             "name": "achimFritz/championship",
@@ -35,17 +35,17 @@
             "time": "2014-05-14 16:31:42"
         },
         {
-            "name": "achimfritz/championship-import",
+            "name": "achimFritz/championship-import",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import.git",
-                "reference": "6b7aa061a83dfd675f2853dde7a4831dd2ddfba6"
+                "reference": "dba2a232d37d452e7ac8002a78bcbe170e210f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip.Import/zipball/6b7aa061a83dfd675f2853dde7a4831dd2ddfba6",
-                "reference": "6b7aa061a83dfd675f2853dde7a4831dd2ddfba6",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip.Import/zipball/dba2a232d37d452e7ac8002a78bcbe170e210f4b",
+                "reference": "dba2a232d37d452e7ac8002a78bcbe170e210f4b",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "source": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/tree/master",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/issues"
             },
-            "time": "2014-05-10 11:12:57"
+            "time": "2014-05-18 13:55:42"
         },
         {
             "name": "composer/installers",
