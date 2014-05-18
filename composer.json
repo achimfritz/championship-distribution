@@ -28,8 +28,8 @@
       "require": {
          "typo3/flow": "2.0.*",
          "doctrine/migrations": "@dev",
-         "achimfritz/championship": "dev-master",
-         "achimfritz/championship-import": "dev-master",
+         "achimfritz/championship": "1.0.1",
+         "achimfritz/championship-import": "1.0.1",
          "typo3/accountmanagement": "@dev"
       },
       "require-dev": {
