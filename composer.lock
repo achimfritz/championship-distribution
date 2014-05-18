@@ -40,12 +40,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import.git",
-                "reference": "c9d32d999a65a431974d91f4bd1946af1dffdffb"
+                "reference": "f254cb185dff51f467ceb57b05d551c876a7244a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip.Import/zipball/c9d32d999a65a431974d91f4bd1946af1dffdffb",
-                "reference": "c9d32d999a65a431974d91f4bd1946af1dffdffb",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip.Import/zipball/f254cb185dff51f467ceb57b05d551c876a7244a",
+                "reference": "f254cb185dff51f467ceb57b05d551c876a7244a",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "source": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/tree/master",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/issues"
             },
-            "time": "2014-05-18 14:10:56"
+            "time": "2014-05-18 14:37:37"
         },
         {
             "name": "composer/installers",
