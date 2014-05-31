@@ -3,11 +3,11 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6ad90ca3de835088cf53e7a25d9a8e4f",
+    "hash": "73a15933b82d8f2a5d3a8a0c94c75760",
     "packages": [
         {
             "name": "achimFritz/championship",
-            "version": "1.0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
@@ -36,7 +36,7 @@
         },
         {
             "name": "achimfritz/championship-import",
-            "version": "1.0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import.git",
@@ -1129,6 +1129,8 @@
     "stability-flags": {
         "typo3/swiftmailer": 20,
         "doctrine/migrations": 20,
+        "achimfritz/championship": 20,
+        "achimfritz/championship-import": 20,
         "typo3/accountmanagement": 20
     },
     "platform": [
