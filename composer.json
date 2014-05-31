@@ -7,6 +7,10 @@
             "type": "composer",
             "url": "http://ci.typo3.robertlemke.net/job/composer-packages/ws/repository/"
          },
+			{  
+				"type": "vcs",
+				"url": "git://git.typo3.org/Packages/TYPO3.SwiftMailer.git"
+			},
          {
             "type": "vcs",
             "url": "git@github.com:achimfritz/AchimFritz.ChampionShip.git"
@@ -27,9 +31,10 @@
       },
       "require": {
          "typo3/flow": "2.0.*",
+			"typo3/swiftmailer": "dev-master",
          "doctrine/migrations": "@dev",
-         "achimfritz/championship": "1.0.1",
-         "achimfritz/championship-import": "1.0.1",
+         "achimfritz/championship": "1.0.3",
+         "achimfritz/championship-import": "1.0.3",
          "typo3/accountmanagement": "@dev"
       },
       "require-dev": {

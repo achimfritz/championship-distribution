@@ -20,7 +20,7 @@ install
 	as root:
 	./flow flow:core:setfilepermissions af www-data www-data
 
-	as af:
+	as user:
 	./flow doctrine:migrate
 	./flow account:create admin test123 Achim Fritz AchimFritz.ChampionShip:Administrator
 
@@ -42,3 +42,19 @@ import stuff from AchimFritz.ChampionShip.Import
 	./import_matches.sh
 
 	(./import_user_tips.sh will not work without package AchimFritz.ChampionShip.AchimFritz or other providing functionality and data)
+
+
+Customizing 
+------------
+
+- in Configuration/Settings.yaml
+
+		AchimFritz:
+		  ChampionShip:
+			 csStyle: 1
+			 mailTo: mailTo@domain.tld
+			 mailFrom: noreply@domain.tld
+
+- tipptrip stuff
+-- emails Service/NotificationService
+-- info Template

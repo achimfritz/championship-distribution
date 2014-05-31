@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "066dd6a9744d4db644eb962cbcc9da5a",
+    "hash": "6ad90ca3de835088cf53e7a25d9a8e4f",
     "packages": [
         {
             "name": "achimFritz/championship",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "897405776c042a17d2c540df9a7763ef956672c6"
+                "reference": "deb9f644e07be7129033ac2719b68185b68d9159"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/897405776c042a17d2c540df9a7763ef956672c6",
-                "reference": "897405776c042a17d2c540df9a7763ef956672c6",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/deb9f644e07be7129033ac2719b68185b68d9159",
+                "reference": "deb9f644e07be7129033ac2719b68185b68d9159",
                 "shasum": ""
             },
             "require": {
@@ -29,23 +29,23 @@
                 }
             },
             "support": {
-                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/master",
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.0.3",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2014-05-14 16:31:42"
+            "time": "2014-05-31 08:18:00"
         },
         {
             "name": "achimfritz/championship-import",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import.git",
-                "reference": "f254cb185dff51f467ceb57b05d551c876a7244a"
+                "reference": "252d25f474322de2281e542c1773aa17b5332487"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip.Import/zipball/f254cb185dff51f467ceb57b05d551c876a7244a",
-                "reference": "f254cb185dff51f467ceb57b05d551c876a7244a",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip.Import/zipball/252d25f474322de2281e542c1773aa17b5332487",
+                "reference": "252d25f474322de2281e542c1773aa17b5332487",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "source": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/tree/master",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/issues"
             },
-            "time": "2014-05-18 14:37:37"
+            "time": "2014-05-28 17:59:16"
         },
         {
             "name": "composer/installers",
@@ -1015,6 +1015,33 @@
             ],
             "description": "A PHP implementation of the OASIS Customer Information Quality (CIQ) XML Standard.",
             "time": "2013-12-10 15:20:40"
+        },
+        {
+            "name": "typo3/swiftmailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/Packages/TYPO3.SwiftMailer.git",
+                "reference": "e8364b17c55f9344f366251abdc6265fe9ff2b05"
+            },
+            "require": {
+                "typo3/flow": "*"
+            },
+            "provide": {
+                "swiftmailer/swiftmailer": "5.0.3"
+            },
+            "type": "typo3-flow-package",
+            "autoload": {
+                "psr-0": {
+                    "TYPO3\\SwiftMailer": "Classes"
+                }
+            },
+            "license": [
+                "LGPL-3.0",
+                "MIT"
+            ],
+            "description": "A TYPO3 Flow package of SwiftMailer",
+            "time": "2014-02-06 19:38:13"
         }
     ],
     "packages-dev": [
@@ -1100,6 +1127,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "typo3/swiftmailer": 20,
         "doctrine/migrations": 20,
         "typo3/accountmanagement": 20
     },
