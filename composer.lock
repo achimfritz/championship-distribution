@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "deb9f644e07be7129033ac2719b68185b68d9159"
+                "reference": "4683a8e742c1d0b75ba9de2e012e000d40ad7281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/deb9f644e07be7129033ac2719b68185b68d9159",
-                "reference": "deb9f644e07be7129033ac2719b68185b68d9159",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/4683a8e742c1d0b75ba9de2e012e000d40ad7281",
+                "reference": "4683a8e742c1d0b75ba9de2e012e000d40ad7281",
                 "shasum": ""
             },
             "require": {
@@ -29,10 +29,10 @@
                 }
             },
             "support": {
-                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.0.3",
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/master",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2014-05-31 08:18:00"
+            "time": "2014-06-01 11:37:58"
         },
         {
             "name": "achimfritz/championship-import",
