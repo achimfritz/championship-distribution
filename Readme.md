@@ -25,6 +25,7 @@ install
 	./flow account:create admin test123 Achim Fritz AchimFritz.ChampionShip:Administrator
 
 	-> login or import stuff from AchimFritz.ChampionShip.Import 
+	-> NOTE: mixing creation of users and matches will destroy the user.tips (because they are init on user creation (or by cli (user:initusersforrecentcup)) (for currentCup))
 
 
 import stuff from AchimFritz.ChampionShip.Import

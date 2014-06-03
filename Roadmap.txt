@@ -1,10 +1,15 @@
 1.0.1
 	-> installation, configuration and migration should fit, remove all dev commit, cleanup branches
 
-1.1.0
-	-> accountRequest
-	-> experts
+1.0.x
+	-> optimizing, testing
 
-2.0.0
+1.1.0
+
+1.1.x
+	-> bugfixing
+
+1.2.0
 	-> cleanup tips.js, rest stuff and ActionController json stuff
 	-> error handler stuff (500, 400)
+	-> remove all security conditions in partials (use in templates)
