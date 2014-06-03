@@ -4,9 +4,7 @@
 1.0.x
 	-> optimizing, testing
 
-1.1.0
-
-1.1.x
+1.1.5
 	-> bugfixing
 		-> registration tipGroup
 		-> cup.list for non admin
@@ -14,6 +12,12 @@
 		-> after delete user you have to clear caches
 		-> do import stuff in Development context
 		-> controller.dia
+		-> Routes.yaml in package
+
+1.1.0
+
+1.1.x
+	-> bugfixing
 
 1.2.0
 	-> cleanup tips.js, rest stuff and ActionController json stuff
