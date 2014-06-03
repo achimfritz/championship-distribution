@@ -8,6 +8,12 @@
 
 1.1.x
 	-> bugfixing
+		-> registration tipGroup
+		-> cup.list for non admin
+		-> email addresses
+		-> after delete user you have to clear caches
+		-> do import stuff in Development context
+		-> controller.dia
 
 1.2.0
 	-> cleanup tips.js, rest stuff and ActionController json stuff
