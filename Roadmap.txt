@@ -13,6 +13,7 @@
 		-> do import stuff in Development context
 		-> controller.dia
 		-> Routes.yaml in package
+		-> Label Registration.TipGroup
 
 1.1.0
 
