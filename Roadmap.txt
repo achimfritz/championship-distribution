@@ -6,7 +6,7 @@
 
 1.1.5
 	-> bugfixing
-		-> registration tipGroup
+		-> registration empty tipGroup
 		-> cup.list for non admin
 		-> email addresses
 		-> after delete user you have to clear caches
