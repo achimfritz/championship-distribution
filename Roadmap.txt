@@ -4,6 +4,22 @@
 1.0.x
 	-> optimizing, testing
 
+1.1.5
+	-> bugfixing
+		-> registration empty tipGroup
+		-> cup.list for non admin
+		-> email addresses
+		-> after delete user you have to clear caches
+		-> do import stuff in Development context
+		-> controller.dia
+		-> Routes.yaml in package
+		-> Label Registration.TipGroup
+		-> delete messageBox
+
+1.1.6
+	-> bugfixing
+		-> delete a new cup with some matches
+
 1.1.0
 
 1.1.x
