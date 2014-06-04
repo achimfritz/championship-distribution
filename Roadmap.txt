@@ -19,6 +19,7 @@
 1.1.6
 	-> bugfixing
 		-> delete a new cup with some matches
+		-> label "Nicht all Pflichtfelder ausgefüllt."
 
 1.1.0
 
