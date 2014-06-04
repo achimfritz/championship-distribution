@@ -14,6 +14,11 @@
 		-> controller.dia
 		-> Routes.yaml in package
 		-> Label Registration.TipGroup
+		-> delete messageBox
+
+1.1.6
+	-> bugfixing
+		-> delete a new cup with some matches
 
 1.1.0
 
