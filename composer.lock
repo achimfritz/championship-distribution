@@ -3,15 +3,21 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "97c6cf9dfb8e8582c092d21afdb48634",
+    "hash": "e900398dfed9323d0269b4433d7ffd0c",
     "packages": [
         {
             "name": "achimFritz/championship",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
-                "url": "git@github.com:achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "95a653453e21661072a4f4c25c67ef5ceff5756e"
+                "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
+                "reference": "2bc70e30ad6a5d0649e3ca5b1ed6a924c9c0bc7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/2bc70e30ad6a5d0649e3ca5b1ed6a924c9c0bc7c",
+                "reference": "2bc70e30ad6a5d0649e3ca5b1ed6a924c9c0bc7c",
+                "shasum": ""
             },
             "require": {
                 "typo3/flow": "*"
@@ -22,7 +28,11 @@
                     "AchimFritz\\ChampionShip": "Classes"
                 }
             },
-            "time": "2014-06-03 18:22:00"
+            "support": {
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.0.5",
+                "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
+            },
+            "time": "2014-06-04 18:02:38"
         },
         {
             "name": "achimfritz/championship-import",
