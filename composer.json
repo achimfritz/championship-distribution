@@ -33,7 +33,7 @@
          "typo3/flow": "2.0.*",
 			"typo3/swiftmailer": "dev-master",
          "doctrine/migrations": "@dev",
-         "achimfritz/championship": "1.0.4",
+         "achimfritz/championship": "1.0.5",
          "achimfritz/championship-import": "1.0.3",
          "typo3/accountmanagement": "@dev"
       },
