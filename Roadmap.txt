@@ -20,6 +20,8 @@
 	-> bugfixing
 		-> delete a new cup with some matches
 		-> label "Nicht all Pflichtfelder ausgefüllt."
+		-> add deploy.sh
+		-> do roadmap in githup
 
 1.1.0
 
