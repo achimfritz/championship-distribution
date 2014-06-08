@@ -18,10 +18,8 @@
 
 1.1.6
 	-> bugfixing
-		-> delete a new cup with some matches
 		-> label "Nicht all Pflichtfelder ausgefüllt."
 		-> add deploy.sh
-		-> do roadmap in githup
 
 1.1.0
 
@@ -29,6 +27,7 @@
 	-> bugfixing
 
 1.2.0
+	-> delete a new cup with some matches
 	-> cleanup tips.js, rest stuff and ActionController json stuff
 	-> error handler stuff (500, 400)
 	-> remove all security conditions in partials (use in templates)
