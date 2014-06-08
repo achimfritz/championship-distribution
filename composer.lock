@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e900398dfed9323d0269b4433d7ffd0c",
+    "hash": "59ad3fb9c8fe4ebba93b1aaf0c2fd6d3",
     "packages": [
         {
             "name": "achimFritz/championship",
-            "version": "1.0.5",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "2bc70e30ad6a5d0649e3ca5b1ed6a924c9c0bc7c"
+                "reference": "2485dd032e3e21c68577b83cac61780396b10898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/2bc70e30ad6a5d0649e3ca5b1ed6a924c9c0bc7c",
-                "reference": "2bc70e30ad6a5d0649e3ca5b1ed6a924c9c0bc7c",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/2485dd032e3e21c68577b83cac61780396b10898",
+                "reference": "2485dd032e3e21c68577b83cac61780396b10898",
                 "shasum": ""
             },
             "require": {
@@ -29,14 +29,14 @@
                 }
             },
             "support": {
-                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.0.5",
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.1.1",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2014-06-04 18:02:38"
+            "time": "2014-06-08 12:44:50"
         },
         {
             "name": "achimfritz/championship-import",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import.git",
@@ -58,7 +58,7 @@
                 }
             },
             "support": {
-                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/tree/master",
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/tree/1.0.3",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import/issues"
             },
             "time": "2014-05-28 17:59:16"
