@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "59ad3fb9c8fe4ebba93b1aaf0c2fd6d3",
+    "hash": "b3b22034bff3dd9f95efb96353fc93d1",
     "packages": [
         {
             "name": "achimFritz/championship",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "2485dd032e3e21c68577b83cac61780396b10898"
+                "reference": "a498475f7e34e137f33a9ded0e1af8ede10120ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/2485dd032e3e21c68577b83cac61780396b10898",
-                "reference": "2485dd032e3e21c68577b83cac61780396b10898",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/a498475f7e34e137f33a9ded0e1af8ede10120ec",
+                "reference": "a498475f7e34e137f33a9ded0e1af8ede10120ec",
                 "shasum": ""
             },
             "require": {
@@ -29,10 +29,10 @@
                 }
             },
             "support": {
-                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.1.1",
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.1.2",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2014-06-08 12:44:50"
+            "time": "2014-06-08 13:28:17"
         },
         {
             "name": "achimfritz/championship-import",
