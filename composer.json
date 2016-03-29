@@ -23,15 +23,15 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "typo3/flow": "2.3.*",
+    "typo3/flow": "3.0.*",
     "typo3/swiftmailer": "dev-master",
     "achimfritz/championship": "1.1.3",
     "achimfritz/championship-import": "1.1.0",
-    "typo3/accountmanagement": "1.0.0"
+    "typo3/accountmanagement": "1.0.1"
   },
   "require-dev": {
-    "typo3/kickstart": "2.3.*",
-    "typo3/buildessentials": "2.3.*",
+    "typo3/kickstart": "3.0.*",
+    "typo3/buildessentials": "3.0.*",
     "mikey179/vfsstream": "~1.6"
   },
   "scripts": {
