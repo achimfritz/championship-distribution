@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c50c4b5e601324dd335cf44582ffe196",
-    "content-hash": "5af23edcb7f0928342a9671f7b984195",
+    "hash": "e8d99364cd05dac68e3fe3e852c3a9fb",
+    "content-hash": "23a29825502e02c45b8772fa8fca576e",
     "packages": [
         {
             "name": "achimFritz/championship",
-            "version": "1.1.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "0a659171cc5d28b5ea707528454060ecb63f41a5"
+                "reference": "2485dd032e3e21c68577b83cac61780396b10898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/0a659171cc5d28b5ea707528454060ecb63f41a5",
-                "reference": "0a659171cc5d28b5ea707528454060ecb63f41a5",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/2485dd032e3e21c68577b83cac61780396b10898",
+                "reference": "2485dd032e3e21c68577b83cac61780396b10898",
                 "shasum": ""
             },
             "require": {
@@ -31,14 +31,14 @@
                 }
             },
             "support": {
-                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.1.3",
+                "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/1.1.1",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2014-06-13 16:09:48"
+            "time": "2014-06-08 12:44:50"
         },
         {
             "name": "achimfritz/championship-import",
-            "version": "1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.Import.git",
@@ -71,12 +71,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "07a9af2d4de5f9ef0bf2d9ae94421e5fc50d7859"
+                "reference": "2e1b1f7597e2f647e99e96e747fcae9718ac817b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/07a9af2d4de5f9ef0bf2d9ae94421e5fc50d7859",
-                "reference": "07a9af2d4de5f9ef0bf2d9ae94421e5fc50d7859",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/2e1b1f7597e2f647e99e96e747fcae9718ac817b",
+                "reference": "2e1b1f7597e2f647e99e96e747fcae9718ac817b",
                 "shasum": ""
             },
             "require": {
@@ -131,7 +131,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2016-02-26 09:54:41"
+            "time": "2016-03-24 07:09:52"
         },
         {
             "name": "doctrine/cache",
@@ -208,12 +208,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "866e100a425b8b73d15393fd081c6bf067f05bf9"
+                "reference": "392b8dd9e04c073e832fcda99270ec5a8f5e30cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/866e100a425b8b73d15393fd081c6bf067f05bf9",
-                "reference": "866e100a425b8b73d15393fd081c6bf067f05bf9",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/392b8dd9e04c073e832fcda99270ec5a8f5e30cd",
+                "reference": "392b8dd9e04c073e832fcda99270ec5a8f5e30cd",
                 "shasum": ""
             },
             "require": {
@@ -266,20 +266,20 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-09-11 15:24:21"
+            "time": "2016-03-27 19:22:52"
         },
         {
             "name": "doctrine/common",
-            "version": "dev-master",
+            "version": "2.6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "773c56e51fc26ae07a47146fae31b320dd6cada3"
+                "reference": "99b55ad9f60d614e7390b99e3d9c2cd029a08a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/773c56e51fc26ae07a47146fae31b320dd6cada3",
-                "reference": "773c56e51fc26ae07a47146fae31b320dd6cada3",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/99b55ad9f60d614e7390b99e3d9c2cd029a08a2a",
+                "reference": "99b55ad9f60d614e7390b99e3d9c2cd029a08a2a",
                 "shasum": ""
             },
             "require": {
@@ -339,25 +339,25 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-12-26 08:54:38"
+            "time": "2015-12-25 13:20:40"
         },
         {
             "name": "doctrine/dbal",
-            "version": "dev-master",
+            "version": "2.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "61e1f860a304c3fb6961ecbec36927b5f20b71c6"
+                "reference": "9e1300bffb9cae048705bb4ed39c19f33e6896d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/61e1f860a304c3fb6961ecbec36927b5f20b71c6",
-                "reference": "61e1f860a304c3fb6961ecbec36927b5f20b71c6",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/9e1300bffb9cae048705bb4ed39c19f33e6896d6",
+                "reference": "9e1300bffb9cae048705bb4ed39c19f33e6896d6",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "~2.4",
-                "php": ">=5.4"
+                "doctrine/common": ">=2.4,<2.7-dev",
+                "php": ">=5.3.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*",
@@ -372,7 +372,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6.x-dev"
+                    "dev-master": "2.5.x-dev"
                 }
             },
             "autoload": {
@@ -410,7 +410,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-02-19 14:48:59"
+            "time": "2016-01-23 14:30:23"
         },
         {
             "name": "doctrine/inflector",
@@ -535,38 +535,45 @@
         },
         {
             "name": "doctrine/migrations",
-            "version": "v1.0.0-alpha3",
+            "version": "1.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "d2d18ef671b47a7d48fae54806adac87e82fe8e9"
+                "reference": "fda27fc96d20a1abd46d4526387c7d6d416da263"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/d2d18ef671b47a7d48fae54806adac87e82fe8e9",
-                "reference": "d2d18ef671b47a7d48fae54806adac87e82fe8e9",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/fda27fc96d20a1abd46d4526387c7d6d416da263",
+                "reference": "fda27fc96d20a1abd46d4526387c7d6d416da263",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": "~2.0",
-                "php": ">=5.3.2"
+                "doctrine/dbal": "~2.2",
+                "ocramius/proxy-manager": "^1.0|^2.0",
+                "php": "^5.5|^7.0",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
             },
             "require-dev": {
-                "symfony/console": "2.*",
-                "symfony/yaml": "2.*"
+                "doctrine/coding-standard": "dev-master",
+                "doctrine/orm": "2.*",
+                "johnkary/phpunit-speedtrap": "~1.0@dev",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "~4.7",
+                "satooshi/php-coveralls": "0.6.*"
             },
-            "suggest": {
-                "symfony/console": "to run the migration from the console"
-            },
+            "bin": [
+                "bin/doctrine-migrations"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "v1.4.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\DBAL\\Migrations": "lib"
+                "psr-4": {
+                    "Doctrine\\DBAL\\Migrations\\": "lib/Doctrine/DBAL/Migrations"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -581,6 +588,10 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Michael Simonson",
+                    "email": "contact@mikesimonson.com"
                 }
             ],
             "description": "Database Schema migrations using Doctrine DBAL",
@@ -589,7 +600,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-03-22 13:09:02"
+            "time": "2016-02-23 15:27:16"
         },
         {
             "name": "doctrine/orm",
@@ -696,6 +707,69 @@
             ],
             "description": "Flow Composer Plugin",
             "time": "2016-02-17 07:47:07"
+        },
+        {
+            "name": "ocramius/proxy-manager",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/ProxyManager.git",
+                "reference": "57e9272ec0e8deccf09421596e0e2252df440e11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/57e9272ec0e8deccf09421596e0e2252df440e11",
+                "reference": "57e9272ec0e8deccf09421596e0e2252df440e11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-code": ">2.2.5,<3.0"
+            },
+            "require-dev": {
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "1.5.*"
+            },
+            "suggest": {
+                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
+                "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
+                "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
+                "zendframework/zend-stdlib": "To use the hydrator proxy",
+                "zendframework/zend-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ProxyManager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
+            "homepage": "https://github.com/Ocramius/ProxyManager",
+            "keywords": [
+                "aop",
+                "lazy loading",
+                "proxy",
+                "proxy pattern",
+                "service proxies"
+            ],
+            "time": "2015-08-09 04:28:19"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -971,16 +1045,16 @@
         },
         {
             "name": "typo3/accountmanagement",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/svparijs/TYPO3.AccountManagement.git",
-                "reference": "94ed5bb6735412926484eda2b5cdb211eb0d535a"
+                "reference": "fc5c842fd6d695ea41ee1cd31d73b2e40899e54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/svparijs/TYPO3.AccountManagement/zipball/94ed5bb6735412926484eda2b5cdb211eb0d535a",
-                "reference": "94ed5bb6735412926484eda2b5cdb211eb0d535a",
+                "url": "https://api.github.com/repos/svparijs/TYPO3.AccountManagement/zipball/fc5c842fd6d695ea41ee1cd31d73b2e40899e54d",
+                "reference": "fc5c842fd6d695ea41ee1cd31d73b2e40899e54d",
                 "shasum": ""
             },
             "require": {
@@ -996,27 +1070,27 @@
                 }
             },
             "support": {
-                "source": "https://github.com/svparijs/TYPO3.AccountManagement/tree/1.0.1",
+                "source": "https://github.com/svparijs/TYPO3.AccountManagement/tree/master",
                 "issues": "https://github.com/svparijs/TYPO3.AccountManagement/issues"
             },
-            "time": "2015-03-16 12:25:45"
+            "time": "2015-03-16 15:06:02"
         },
         {
             "name": "typo3/eel",
-            "version": "2.3.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/eel.git",
-                "reference": "5a370dd69355c1e62e35abc5f29beb9164077fb6"
+                "reference": "9166eca82477122857b70175105bb7d030483d27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/eel/zipball/5a370dd69355c1e62e35abc5f29beb9164077fb6",
-                "reference": "5a370dd69355c1e62e35abc5f29beb9164077fb6",
+                "url": "https://api.github.com/repos/neos/eel/zipball/9166eca82477122857b70175105bb7d030483d27",
+                "reference": "9166eca82477122857b70175105bb7d030483d27",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "~2.3.0"
+                "typo3/flow": "~3.0.0"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -1029,41 +1103,43 @@
                 "MIT"
             ],
             "description": "The Embedded Expression Language (Eel) is a building block for creating Domain Specific Languages",
-            "time": "2016-01-13 10:30:07"
+            "time": "2016-01-14 14:54:57"
         },
         {
             "name": "typo3/flow",
-            "version": "2.3.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/flow.git",
-                "reference": "86feafe465e45ebc8b7783c700c71f5fda507266"
+                "reference": "54fc0644199f422cc5261fd6789f2b7fe294e6da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/flow/zipball/86feafe465e45ebc8b7783c700c71f5fda507266",
-                "reference": "86feafe465e45ebc8b7783c700c71f5fda507266",
+                "url": "https://api.github.com/repos/neos/flow/zipball/54fc0644199f422cc5261fd6789f2b7fe294e6da",
+                "reference": "54fc0644199f422cc5261fd6789f2b7fe294e6da",
                 "shasum": ""
             },
             "require": {
-                "doctrine/migrations": "1.0.0-alpha3",
-                "doctrine/orm": "2.4.*",
+                "doctrine/dbal": "~2.5.0",
+                "doctrine/migrations": "~1.3.0",
+                "doctrine/orm": "~2.4.0",
                 "ext-json": ">=1.2.0",
-                "ext-session": "*",
+                "ext-mbstring": "*",
+                "ext-reflection": "*",
                 "ext-spl": "*",
                 "ext-zlib": "*",
                 "neos/composer-plugin": "^1.0.1",
-                "php": ">=5.3.2",
-                "symfony/console": "2.*",
-                "symfony/dom-crawler": "2.5.*",
-                "symfony/yaml": "2.5.*",
-                "typo3/eel": "~2.3.0",
-                "typo3/fluid": "~2.3.0",
-                "typo3/party": "2.3.*"
+                "php": ">=5.5.0",
+                "symfony/console": "~2.0",
+                "symfony/dom-crawler": "~2.5.0",
+                "symfony/yaml": "~2.5.0",
+                "typo3/eel": "~3.0.0",
+                "typo3/fluid": "~3.0.0"
             },
             "suggest": {
                 "doctrine/data-fixtures": "To manage and execute the loading of data fixtures for the Doctrine ORM or ODM",
-                "ext-curl": "To use the \\TYPO3\\Flow\\Http\\Client\\CurlEngine"
+                "ext-curl": "To use the \\TYPO3\\Flow\\Http\\Client\\CurlEngine",
+                "typo3/party": "To make use of basic user handling"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -1077,24 +1153,24 @@
             ],
             "description": "Flow Application Framework",
             "homepage": "http://flow.typo3.org",
-            "time": "2016-03-22 10:32:52"
+            "time": "2016-03-25 10:58:53"
         },
         {
             "name": "typo3/fluid",
-            "version": "2.3.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/fluid.git",
-                "reference": "a5c3f324f06684db41f3e00a5b08d05e5bd22a4d"
+                "reference": "5e637648429e7a6bdab093f9bb5d57096e2da7f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/fluid/zipball/a5c3f324f06684db41f3e00a5b08d05e5bd22a4d",
-                "reference": "a5c3f324f06684db41f3e00a5b08d05e5bd22a4d",
+                "url": "https://api.github.com/repos/neos/fluid/zipball/5e637648429e7a6bdab093f9bb5d57096e2da7f0",
+                "reference": "5e637648429e7a6bdab093f9bb5d57096e2da7f0",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "~2.3.0"
+                "typo3/flow": "~3.0.0"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -1107,24 +1183,24 @@
                 "MIT"
             ],
             "description": "Next-Generation Templating Framework for Flow and Neos",
-            "time": "2016-01-13 10:10:27"
+            "time": "2016-03-25 10:49:53"
         },
         {
             "name": "typo3/party",
-            "version": "2.3.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/party.git",
-                "reference": "248c2ce04c1e7ab93dcbfc3a83c41b059e51fb4c"
+                "reference": "3d5be9a90469ddbe94ad5232935e6a5be65964f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/party/zipball/248c2ce04c1e7ab93dcbfc3a83c41b059e51fb4c",
-                "reference": "248c2ce04c1e7ab93dcbfc3a83c41b059e51fb4c",
+                "url": "https://api.github.com/repos/neos/party/zipball/3d5be9a90469ddbe94ad5232935e6a5be65964f2",
+                "reference": "3d5be9a90469ddbe94ad5232935e6a5be65964f2",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "2.3.*"
+                "typo3/flow": "3.0.*"
             },
             "type": "typo3-flow-package",
             "autoload": {
@@ -1137,7 +1213,7 @@
                 "LGPL-3.0+"
             ],
             "description": "A PHP implementation of the OASIS Customer Information Quality (CIQ) XML Standard.",
-            "time": "2016-02-12 14:17:03"
+            "time": "2016-02-23 17:11:12"
         },
         {
             "name": "typo3/swiftmailer",
@@ -1170,6 +1246,112 @@
             ],
             "description": "A Flow package for easy use of Swift Mailer",
             "time": "2015-11-18 11:28:38"
+        },
+        {
+            "name": "zendframework/zend-code",
+            "version": "2.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-code.git",
+                "reference": "c4e8f976a772cfb14b47dabd69b5245a423082b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c4e8f976a772cfb14b47dabd69b5245a423082b4",
+                "reference": "c4e8f976a772cfb14b47dabd69b5245a423082b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "zendframework/zend-eventmanager": "^2.6|^3.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-stdlib": "~2.7"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev",
+                    "dev-develop": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Code\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "homepage": "https://github.com/zendframework/zend-code",
+            "keywords": [
+                "code",
+                "zf2"
+            ],
+            "time": "2016-01-05 05:58:37"
+        },
+        {
+            "name": "zendframework/zend-eventmanager",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-eventmanager.git",
+                "reference": "e6bf66a22fe990ff477e66055c502f3ba685020d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/e6bf66a22fe990ff477e66055c502f3ba685020d",
+                "reference": "e6bf66a22fe990ff477e66055c502f3ba685020d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "^0.1",
+                "container-interop/container-interop": "^1.1.0",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "^2.0",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
+            },
+            "suggest": {
+                "container-interop/container-interop": "^1.1.0, to use the lazy listeners feature",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\EventManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Trigger and listen to events within a PHP application",
+            "homepage": "https://github.com/zendframework/zend-eventmanager",
+            "keywords": [
+                "event",
+                "eventmanager",
+                "events",
+                "zf2"
+            ],
+            "time": "2016-03-07 15:48:37"
         }
     ],
     "packages-dev": [
@@ -1179,12 +1361,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikey179/vfsStream.git",
-                "reference": "9d2c56cbd7ef8526f14daf816a6432e3e82b6065"
+                "reference": "233f48f1146a7f520ad603c46481abcfe39e979d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/9d2c56cbd7ef8526f14daf816a6432e3e82b6065",
-                "reference": "9d2c56cbd7ef8526f14daf816a6432e3e82b6065",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/233f48f1146a7f520ad603c46481abcfe39e979d",
+                "reference": "233f48f1146a7f520ad603c46481abcfe39e979d",
                 "shasum": ""
             },
             "require": {
@@ -1217,20 +1399,20 @@
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
-            "time": "2016-03-23 13:49:52"
+            "time": "2016-03-23 19:42:51"
         },
         {
             "name": "typo3/buildessentials",
-            "version": "2.3.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/BuildEssentials.git",
-                "reference": "5b0dd8f4a66f7369e7c2cf356a66866b25b41094"
+                "reference": "0f63270c0f02a0fee5eaec9db91b99cb006786bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/BuildEssentials/zipball/5b0dd8f4a66f7369e7c2cf356a66866b25b41094",
-                "reference": "5b0dd8f4a66f7369e7c2cf356a66866b25b41094",
+                "url": "https://api.github.com/repos/neos/BuildEssentials/zipball/0f63270c0f02a0fee5eaec9db91b99cb006786bd",
+                "reference": "0f63270c0f02a0fee5eaec9db91b99cb006786bd",
                 "shasum": ""
             },
             "require": {
@@ -1245,24 +1427,24 @@
                 "LGPL-3.0+"
             ],
             "description": "TYPO3 Flow Build Toolchain Essentials",
-            "time": "2016-03-08 10:00:48"
+            "time": "2016-03-08 10:02:07"
         },
         {
             "name": "typo3/kickstart",
-            "version": "2.3.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/kickstart.git",
-                "reference": "96e182207811baac55fece7002bb8a9ad94ad477"
+                "reference": "59dd09afd7655b35db8d90d777add663f8b33983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/kickstart/zipball/96e182207811baac55fece7002bb8a9ad94ad477",
-                "reference": "96e182207811baac55fece7002bb8a9ad94ad477",
+                "url": "https://api.github.com/repos/neos/kickstart/zipball/59dd09afd7655b35db8d90d777add663f8b33983",
+                "reference": "59dd09afd7655b35db8d90d777add663f8b33983",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "~2.3.0"
+                "typo3/flow": "~3.0.0"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -1275,13 +1457,16 @@
                 "MIT"
             ],
             "description": "A simple generator for controller and views.",
-            "time": "2015-12-11 12:20:36"
+            "time": "2015-12-15 23:37:21"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "typo3/swiftmailer": 20
+        "typo3/swiftmailer": 20,
+        "achimfritz/championship": 20,
+        "achimfritz/championship-import": 20,
+        "typo3/accountmanagement": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
