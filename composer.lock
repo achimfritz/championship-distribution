@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae22e233ca5c418b77cf75efb4566838",
+    "content-hash": "f3efd39ad601de0a28f2d53284551491",
     "packages": [
         {
             "name": "achimfritz/championship",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "670d68bde3841126567ec35cb532dcc40b56f68c"
+                "reference": "8b13b1626015bd99ac65cec704aaa61ec0d69c51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/670d68bde3841126567ec35cb532dcc40b56f68c",
-                "reference": "670d68bde3841126567ec35cb532dcc40b56f68c",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/8b13b1626015bd99ac65cec704aaa61ec0d69c51",
+                "reference": "8b13b1626015bd99ac65cec704aaa61ec0d69c51",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/master",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2021-05-20T14:16:58+00:00"
+            "time": "2021-05-21T14:20:47+00:00"
         },
         {
             "name": "achimfritz/rest",
