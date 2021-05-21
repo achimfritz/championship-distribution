@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/achimfritz/AchimFritz.ChampionShip.git",
-                "reference": "8b13b1626015bd99ac65cec704aaa61ec0d69c51"
+                "reference": "129291190e131a3bcc1fbb128d760c45455acdaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/8b13b1626015bd99ac65cec704aaa61ec0d69c51",
-                "reference": "8b13b1626015bd99ac65cec704aaa61ec0d69c51",
+                "url": "https://api.github.com/repos/achimfritz/AchimFritz.ChampionShip/zipball/129291190e131a3bcc1fbb128d760c45455acdaf",
+                "reference": "129291190e131a3bcc1fbb128d760c45455acdaf",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "source": "https://github.com/achimfritz/AchimFritz.ChampionShip/tree/master",
                 "issues": "https://github.com/achimfritz/AchimFritz.ChampionShip/issues"
             },
-            "time": "2021-05-21T14:20:47+00:00"
+            "time": "2021-05-21T16:48:44+00:00"
         },
         {
             "name": "achimfritz/rest",
