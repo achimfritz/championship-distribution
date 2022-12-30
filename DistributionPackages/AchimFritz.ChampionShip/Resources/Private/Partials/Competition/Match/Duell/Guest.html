@@ -1,0 +1,36 @@
+{namespace cs=AchimFritz\ChampionShip\ViewHelpers}
+<f:if condition="{match.guestTeam}">
+	<f:then>
+		<f:render partial="Competition/Team/Name" arguments="{team: match.guestTeam}" />
+	</f:then>
+	<f:else>
+		<cs:ifIsCrossGroupMatch match="{match}">
+			<f:then>
+				<cs:ifIsCrossGroupWithThirdsMatch match="{match}">
+					<f:then>
+						{match.guestGroupRank}.
+						<f:for each="{match.guestGroupRounds}" as="round">
+							{round.name}
+						</f:for>
+					</f:then>
+					<f:else>
+						{match.guestGroupRank}. {match.guestGroupRound.name}
+					</f:else>
+				</cs:ifIsCrossGroupWithThirdsMatch>
+			</f:then>
+			<f:else>
+				<cs:ifIsTeamsOfTwoMatchesMatch match="{match}">
+					<f:if condition="{match.guestMatchIsWinner}">
+						<f:then>
+							1.
+						</f:then>
+						<f:else>
+							2.
+						</f:else>
+					</f:if>
+					{match.guestMatch.name}
+				</cs:ifIsTeamsOfTwoMatchesMatch>
+			</f:else>
+		</cs:ifIsCrossGroupMatch>
+	</f:else>
+</f:if>

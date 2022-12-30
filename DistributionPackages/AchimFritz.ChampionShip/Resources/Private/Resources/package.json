@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jslint": "*",
+    "grunt-newer": "*",
+    "grunt-ng-annotate": "*",
+    "grunt-svg-sprite": "^1.2.19",
+    "jshint-stylish": "*",
+    "load-grunt-config": "*",
+    "load-grunt-tasks": "*"
+  }
+}

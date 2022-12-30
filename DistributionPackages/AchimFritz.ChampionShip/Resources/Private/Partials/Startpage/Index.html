@@ -1,0 +1,50 @@
+{namespace cs=AchimFritz\ChampionShip\ViewHelpers}
+<div class="row">
+	<div class="col-md-12 col-lg-5 text-center">
+		<img src="{f:uri.resource(path: 'Images/footballtip_start.jpg')}" alt="home" />
+	</div>
+
+	<f:security.ifAuthenticated>
+		<f:then>
+			<div class="col-md-12 col-lg-7 text-left">
+				<h4><f:translate id="tip" /></h4>
+				<ul class="nav nav-pills">
+					<li>
+						<f:link.action class="btn btn-default" action="index" subpackage="Tip" controller="GroupMatchTip" arguments="{cup: cup}"><f:translate id="groupMatch" /></f:link.action>
+					</li>
+					<li>
+						<f:link.action class="btn btn-default" action="index" subpackage="Tip" controller="GroupRoundTip" arguments="{cup: cup}"><f:translate id="groupRound" /></f:link.action>
+					</li>
+					<li>
+						<f:link.action class="btn btn-default" action="index" subpackage="Tip" controller="KoRoundTip" arguments="{cup: cup}"><f:translate id="koRound" /></f:link.action>
+					</li>
+				</ul>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="col-md-12 col-lg-7 text-left">
+				<f:render partial="Startpage/NavPills" arguments="{cup: cup}" />
+			</div>
+		</f:else>
+	</f:security.ifAuthenticated>
+
+	<div class="col-md-12 col-lg-7 text-left">
+		<cs:currentMatches cup="{cup}" limit="3" past="1">
+			<f:if condition="{matches}">
+				<h4><f:translate id="lastMatches" /></h4>
+				<f:render partial="Competition/Match/List" arguments="{matches: matches}" />
+			</f:if>
+		</cs:currentMatches>
+		<cs:currentMatches cup="{cup}" limit="3" past="0">
+			<f:if condition="{matches}">
+				<h4><f:translate id="nextMatches" /></h4>
+				<f:render partial="Competition/Match/List" arguments="{matches: matches}" />
+			</f:if>
+		</cs:currentMatches>
+
+	</div>
+
+	<div class="col-xs-12">
+		<f:render partial="Startpage/Info" arguments="{cup: cup}" />
+	</div>
+</div>

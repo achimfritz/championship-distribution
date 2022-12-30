@@ -1,0 +1,22 @@
+
+AchimFritz:
+  ChampionShip:
+    csStyle: 1
+    mailTo: mailTo@domain.tld
+    mailFrom: noreply@domain.tld
+Neos:
+  Flow:
+    security:
+      authentication:
+        providers:
+          ApiProvider:
+            provider: PersistedUsernamePasswordProvider
+            token: Neos\Flow\Security\Authentication\Token\UsernamePasswordHttpBasic
+          DefaultProvider:
+            provider: PersistedUsernamePasswordProvider
+            token: Neos\Flow\Security\Authentication\Token\UsernamePassword
+            entryPoint: WebRedirect
+            entryPointOptions:
+              uri: /achimfritz.championship/generic/accessdenied/index
+    i18n:
+      defaultLocale: de

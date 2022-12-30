@@ -1,0 +1,12 @@
+standard:
+  - less
+  - concat
+  - cssmin
+  - copy
+  - uglify
+default:
+  - standard
+dev:
+  - less
+  - concat
+  - watch

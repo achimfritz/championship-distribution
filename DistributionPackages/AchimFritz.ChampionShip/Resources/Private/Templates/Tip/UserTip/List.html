@@ -1,0 +1,32 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+	<h4><f:translate id="tipGroupGroupRoundResults" /></h4>
+	<p><f:translate id="tipGroupResults.info" /></p>
+
+	<div class="row">
+		<f:if condition="{users}">
+			<f:then>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>&nbsp;</th>
+					</tr>
+					</thead>
+					<tbody>
+					<f:for each="{users}" as="currentUser" iteration="it">
+						<tr class="clickable-row" data-href="{f:uri.action(action: 'index', arguments: {cup: cup, user: currentUser})}">
+							<td>
+								{currentUser.displayName}
+							</td>
+						</tr>
+					</f:for>
+					</tbody>
+				</table>
+			</f:then>
+			<f:else>
+				<p>No users created yet.</p>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>

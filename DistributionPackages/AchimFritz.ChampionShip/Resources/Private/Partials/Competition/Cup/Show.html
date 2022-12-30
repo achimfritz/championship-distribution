@@ -1,0 +1,25 @@
+{namespace cs=AchimFritz\ChampionShip\ViewHelpers}
+
+<f:security.ifHasRole role="AchimFritz.ChampionShip:Administrator">
+
+	<h1>{cup.name}</h1>
+	<div class="row">
+		<f:link.action action="index">
+			<botton type="button" class="btn btn-default">
+				list
+			</botton>
+		</f:link.action>
+	</div>
+	<div class="row">
+		<div class="col-md-6 text-center col-xs-12">
+			<f:render partial="Actions/Delete" arguments="{object: cup}" />
+			<f:link.action action="index" class="btn">list</f:link.action>
+		</div>
+	</div>
+
+	<div class="row">
+		<f:render partial="Cup/Edit" arguments="{cup: cup, allTeams: allTeams}" />
+	</div>
+
+</f:security.ifHasRole>
+
