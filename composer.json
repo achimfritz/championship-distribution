@@ -11,7 +11,9 @@
         "achimfritz/championship": "@dev",
         "neos/flow": "~8.2.0",
         "achimfritz/rest": "@dev",
-        "neos/swiftmailer": "^7.3"
+        "neos/swiftmailer": "^7.3",
+        "neos/fluid-adaptor": "^8.2",
+        "neos/kickstarter": "^8.2"
     },
     "repositories": {
         "distributionPackages": {
@@ -25,5 +27,9 @@
         "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "phpstan/phpstan": "1.9.x-dev"
     }
 }
