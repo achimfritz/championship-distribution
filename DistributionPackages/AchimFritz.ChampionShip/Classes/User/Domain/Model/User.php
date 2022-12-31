@@ -83,12 +83,12 @@ class User
         $this->addTipGroup($tipGroup);
     }
 
-    public function getTipGroups(): ArrayCollection
+    public function getTipGroups(): Collection
     {
         return $this->tipGroups;
     }
 
-    public function setTipGroups(ArrayCollection $tipGroups): void
+    public function setTipGroups(Collection $tipGroups): void
     {
         $this->tipGroups = $tipGroups;
     }
