@@ -14,6 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @Flow\Entity
  * @ORM\InheritanceType("JOINED")
+ * @ORM\Table("achimfritz_championship_competition_domain_model_match")
  */
 class GeneralMatch
 {
