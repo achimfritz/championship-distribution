@@ -10,6 +10,7 @@ namespace AchimFritz\ChampionShip\Chat\Controller;
 use Neos\Flow\Annotations as Flow;
 use AchimFritz\ChampionShip\Chat\Domain\Model\ChatEntry;
 use AchimFritz\ChampionShip\Tip\Controller\AbstractTipGroupController;
+use AchimFritz\ChampionShip\User\Domain\Model\User;
 
 class AbstractChatEntryController extends AbstractTipGroupController
 {
@@ -17,6 +18,8 @@ class AbstractChatEntryController extends AbstractTipGroupController
      * @var string
      */
     protected $resourceArgumentName = 'chatEntry';
+
+    protected $chatEntryRepository;
 
     /**
      * initializeView

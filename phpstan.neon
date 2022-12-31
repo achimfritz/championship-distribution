@@ -6,12 +6,8 @@ parameters:
 
   excludePaths:
     - %currentWorkingDirectory%/DistributionPackages/*/Tests/*
+    - %currentWorkingDirectory%/DistributionPackages/AchimFritz.ChampionShip/Resources
 
   ignoreErrors:
-    - '#Constant FLOW_PATH_ROOT not found.#'
-    - '#Constant FLOW_PATH_DATA not found.#'
-    - '#Constant FLOW_PATH_WEB not found.#'
-    - '#Constant FLOW_PATH_PACKAGES not found.#'
-    - '#Call to an undefined method AchimFritz\\Documents\\Domain\\Repository\\DocumentListRepository::findOneByCategory\(\).#'
-    - '#Call to an undefined method AchimFritz\\Documents\\Domain\\Repository\\FileSystemDocumentRepository::findByFileHash\(\).#'
-    - '#Call to an undefined method AchimFritz\\Documents\\Domain\\Repository\\CategoryRepository::findOneByPath\(\).#'
+    - '#Constant FLOW_SAPITYPE not found.#'
+

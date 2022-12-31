@@ -52,6 +52,7 @@ class EnvironmentViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractV
      */
     public function render()
     {
+        $cup = null;
         $request = $this->controllerContext->getRequest();
         if ($request->hasArgument('cup')) {
             $arg = $request->getArgument('cup');

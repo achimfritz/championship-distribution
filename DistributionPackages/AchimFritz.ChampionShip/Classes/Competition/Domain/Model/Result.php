@@ -83,12 +83,7 @@ class Result
         $this->guestTeamGoals = $guestTeamGoals;
     }
 
-    /**
-     * getGuestPoints
-     *
-     * @return integer
-     */
-    public function getGuestPoints()
+    public function getGuestPoints(): ?int
     {
         if ($this->getGuestWins()) {
             return 3;
@@ -97,14 +92,10 @@ class Result
         } elseif ($this->getIsRemis()) {
             return 1;
         }
+        return null;
     }
 
-    /**
-     * getHostPoints
-     *
-     * @return integer
-     */
-    public function getHostPoints()
+    public function getHostPoints(): ?int
     {
         if ($this->getGuestWins()) {
             return 0;
@@ -113,6 +104,7 @@ class Result
         } elseif ($this->getIsRemis()) {
             return 1;
         }
+        return null;
     }
 
     /**

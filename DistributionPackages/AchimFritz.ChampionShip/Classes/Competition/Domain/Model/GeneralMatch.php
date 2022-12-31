@@ -163,7 +163,7 @@ class GeneralMatch
     {
         $hostTeam = $this->getHostTeam();
         $guestTeam = $this->getGuestTeam();
-        if (!isset($hostTeam) or !isset($guestTeam)) {
+        if ($hostTeam === null || $guestTeam === null) {
             return false;
         }
         if (
@@ -283,12 +283,7 @@ class GeneralMatch
         $this->startDate = $startDate;
     }
 
-    /**
-     * Get the Match hostTeam
-     *
-     * @return \AchimFritz\ChampionShip\Competition\Domain\Model\Team
-     */
-    public function getHostTeam()
+    public function getHostTeam(): ?Team
     {
         return $this->hostTeam;
     }
@@ -304,12 +299,7 @@ class GeneralMatch
         $this->hostTeam = $hostTeam;
     }
 
-    /**
-     * Get the Match guestTeam
-     *
-     * @return \AchimFritz\ChampionShip\Competition\Domain\Model\Team
-     */
-    public function getGuestTeam()
+    public function getGuestTeam(): ?Team
     {
         return $this->guestTeam;
     }

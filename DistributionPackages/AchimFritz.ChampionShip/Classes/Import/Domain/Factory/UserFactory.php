@@ -8,8 +8,8 @@ namespace AchimFritz\ChampionShip\Import\Domain\Factory;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use AchimFritz\ChampionShip\Domain\Model\User;
-use AchimFritz\ChampionShip\Domain\Model\TipGroup;
+use AchimFritz\ChampionShip\User\Domain\Model\User;
+use AchimFritz\ChampionShip\User\Domain\Model\TipGroup;
 
 /**
  * UserFactory
@@ -42,12 +42,6 @@ class UserFactory
      */
     protected $userMapper;
 
-    /**
-     * createFromUser
-     *
-     * @param \AchimFritz\ChampionShip\Import\Domain\Model\User $user
-     * @param \AchimFritz\ChampionShip\Domain\Model\User $user
-     */
     public function createFromUser(\AchimFritz\ChampionShip\Import\Domain\Model\User $user)
     {
         $this->userMapper->ignoredUsers($user);

@@ -10,6 +10,7 @@ namespace AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable;
 use AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
 use Neos\Flow\Annotations as Flow;
 use AchimFritz\ChampionShip\Competition\Domain\Model\GroupTableRow;
+use AchimFritz\ChampionShip\Competition\Domain\Model\GroupMatch;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Psr\Log\LoggerInterface;
@@ -61,15 +62,7 @@ abstract class AbstractPointEqualityPolicy
         $this->systemLogger->log(LogLevel::INFO, $this->getPolicyName() . ': ' . $message);
     }
 
-    /**
-     * getMatchOfTwoRows
-     *
-     * @param \Doctrine\Common\Collections\Collection $matches
-     * @param GroupTableRow $row
-     * @param GroupTableRow $next
-     * @return void
-     */
-    protected function getMatchOfTwoRows(\Doctrine\Common\Collections\Collection $matches, GroupTableRow $row, GroupTableRow $next)
+    protected function getMatchOfTwoRows(\Doctrine\Common\Collections\Collection $matches, GroupTableRow $row, GroupTableRow $next): ?GroupMatch
     {
         $teamOne = $row->getTeam();
         $teamTwo = $next->getTeam();
@@ -78,6 +71,7 @@ abstract class AbstractPointEqualityPolicy
                 return $match;
             }
         }
+        return null;
     }
 
     /**
@@ -87,7 +81,7 @@ abstract class AbstractPointEqualityPolicy
      * @param Collection<GroupMatch> $matches
      * @return ArrayCollection<GroupMatch> $relavant
      */
-    protected function getRelevantMatches(array $rows, Collection $matches)
+    protected function getRelevantMatches(array $rows, Collection $matches): ArrayCollection
     {
         $relevant = new ArrayCollection();
         if (count($rows) == 2) {
@@ -114,9 +108,8 @@ abstract class AbstractPointEqualityPolicy
      *
      * @param array<GroupTableRow> $rows
      * @param Collection<GroupMatch> $matches
-     * @return ArrayCollection<GroupMatch> $relavant
      */
-    protected function pointEquality(array $rows, Collection $matches)
+    protected function pointEquality(array $rows, Collection $matches): void
     {
         $this->addMessage('checking ' . count($rows) . ' teams');
 

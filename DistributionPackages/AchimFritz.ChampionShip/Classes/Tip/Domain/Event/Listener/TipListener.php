@@ -5,7 +5,7 @@ namespace AchimFritz\ChampionShip\Tip\Domain\Event\Listener;
 use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
 use Neos\Flow\Annotations as Flow;
 use AchimFritz\ChampionShip\Tip\Domain\Model\TipCup;
-use AchimFritz\ChampionShip\Domain\Model\Result;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Result;
 
 /**
  * @Flow\Scope("singleton")

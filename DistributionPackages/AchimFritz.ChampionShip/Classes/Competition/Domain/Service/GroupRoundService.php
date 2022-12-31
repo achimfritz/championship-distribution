@@ -134,11 +134,7 @@ class GroupRoundService
     }
 
 
-    /**
-     * @param $groupTableRows
-     * @return void
-     */
-    protected function buildRoundsString($groupTableRows)
+    protected function buildRoundsString(array $groupTableRows): string
     {
         $rounds = [];
         foreach ($groupTableRows as $groupTableRow) {
@@ -148,12 +144,7 @@ class GroupRoundService
         return implode('', $rounds);
     }
 
-    /**
-     * @param Cup $cup
-     * @return array
-     * @throws Exception
-     */
-    protected function buildGroupTableRows(Cup $cup)
+    protected function buildGroupTableRows(Cup $cup): array
     {
         $groupRounds = $this->groupRoundRepository->findByCup($cup);
         $groupTableRows = [];

@@ -34,7 +34,7 @@ class IfTipIsEditableViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abstr
         return (string)$this->renderElseChild();
     }
 
-    protected static function evaluateCondition($arguments = null, RenderingContextInterface $renderingContext): bool
+    protected static function evaluateCondition($arguments, RenderingContextInterface $renderingContext): bool
     {
         $objectManager = $renderingContext->getObjectManager();
         $tipSecurity = $objectManager->get(TipSecurity::class);

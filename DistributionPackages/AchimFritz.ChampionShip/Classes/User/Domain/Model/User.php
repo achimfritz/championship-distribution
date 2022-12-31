@@ -7,6 +7,7 @@ namespace AchimFritz\ChampionShip\User\Domain\Model;
  *                                                                        *
  *                                                                        */
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Neos\Flow\Annotations as Flow;
 use Doctrine\ORM\Mapping as ORM;
@@ -82,46 +83,27 @@ class User
         $this->addTipGroup($tipGroup);
     }
 
-    /**
-     * @return  The Cup's tipGroups
-     */
-    public function getTipGroups()
+    public function getTipGroups(): ArrayCollection
     {
         return $this->tipGroups;
     }
 
-    /**
-     * @param  $tipGroups The Cup's tipGroups
-     * @return void
-     */
-    public function setTipGroups($tipGroups)
+    public function setTipGroups(ArrayCollection $tipGroups): void
     {
         $this->tipGroups = $tipGroups;
     }
 
-    /**
-     * @param TipGroup $tipGroup
-     * @return void
-     */
-    public function removeTipGroup(TipGroup $tipGroup)
+    public function removeTipGroup(TipGroup $tipGroup): void
     {
         $this->tipGroups->removeElement($tipGroup);
     }
 
-    /**
-     * @param TipGroup $tipGroup
-     * @return void
-     */
-    public function hasTipGroup(TipGroup $tipGroup)
+    public function hasTipGroup(TipGroup $tipGroup): bool
     {
         return $this->tipGroups->contains($tipGroup);
     }
 
-    /**
-     * @param Collection $otherTipGroups
-     * @return bool
-     */
-    public function hasOneOfTipGroups(Collection $otherTipGroups)
+    public function hasOneOfTipGroups(Collection $otherTipGroups): bool
     {
         foreach ($otherTipGroups as $otherTipGroup) {
             if ($this->hasTipGroup($otherTipGroup) === true) {
@@ -131,11 +113,7 @@ class User
         return false;
     }
 
-    /**
-     * @param TipGroup $tipGroup
-     * @return void
-     */
-    public function addTipGroup(TipGroup $tipGroup)
+    public function addTipGroup(TipGroup $tipGroup): void
     {
         if ($this->hasTipGroup($tipGroup) === false) {
             $this->tipGroups->add($tipGroup);

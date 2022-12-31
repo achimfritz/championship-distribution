@@ -63,18 +63,11 @@ class TestCommandController extends \Neos\Flow\Cli\CommandController
     public function cupCommand()
     {
         $hf1 = $this->matchRepository->findOneByName('test1Match');
-        #$l = $this->teamsOfTwoMatchesMatchRepository->findOneByHostMatch($hf1);
-        #$this->outputLine('found?: ' . get_class($l));
-        #$l = $this->teamsOfTwoMatchesMatchRepository->findOneByGuestMatch($hf1);
-        #$l = $this->teamsOfTwoMatchesMatchRepository->findOneByGuestMatchAndWinner($hf1, TRUE);
-        #$this->outputLine('found?: ' . get_class($l));
-
         $hf1->getResult()->setHostTeamGoals(0);
         $hf1->getResult()->setGuestTeamGoals(1);
         $this->matchRepository->update($hf1);
         $looserTeam = $hf1->getLooserTeam();
         $this->outputLine('looser: ' . $looserTeam->getName());
-        //$hf2 = $this->matchRepository->findOneByName('test2Match');
     }
 
     /**
@@ -93,9 +86,7 @@ class TestCommandController extends \Neos\Flow\Cli\CommandController
         $round = $this->roundRepository->findOneByName('aa');
 
         $hf1 = new KoMatch();
-        $r1 = new Result();
-        $r1->setHostTeamGoals(2);
-        $r1->setGuestTeamGoals(0);
+        $r1 = new Result(2, 0);
         $hf1->setResult($r1);
         $hf1->setHostTeam($t1);
         $hf1->setGuestTeam($t2);
@@ -105,9 +96,7 @@ class TestCommandController extends \Neos\Flow\Cli\CommandController
         $hf1->setRound($round);
 
         $hf2 = new KoMatch();
-        $r2 = new Result();
-        $r2->setHostTeamGoals(2);
-        $r2->setGuestTeamGoals(0);
+        $r2 = new Result(2, 0);
         $hf2->setResult($r2);
         $hf2->setHostTeam($t3);
         $hf2->setGuestTeam($t4);

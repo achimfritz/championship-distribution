@@ -113,7 +113,7 @@ class TipFactory
         }
         if ($tip->getHomeTip() != 99 and $tip->getGuestTip() != 99) {
             if (!$newTip->getResult() instanceof Result) {
-                $result = new Result();
+                $result = new Result($tip->getHomeTip(), $tip->getGuestTip());
                 $newTip->setResult($result);
             }
             $newTip->getResult()->setHostTeamGoals($tip->getHomeTip());

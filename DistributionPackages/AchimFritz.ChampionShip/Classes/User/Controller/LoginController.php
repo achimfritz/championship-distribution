@@ -12,7 +12,9 @@ namespace AchimFritz\ChampionShip\User\Controller;
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
 
+use AchimFritz\ChampionShip\User\Domain\Repository\UserRepository;
 use Neos\Flow\Annotations as Flow;
+use Neos\Flow\I18n\Translator;
 
 /**
  * A controller which allows for loggin into a application
@@ -23,21 +25,15 @@ class LoginController extends \Neos\Flow\Security\Authentication\Controller\Abst
 {
     /**
      * @Flow\Inject
-     * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
      */
-    protected $userRepository;
-
+    protected UserRepository $userRepository;
 
     /**
-     * @var \Neos\Flow\I18n\Translator
      * @Flow\Inject
      */
-    protected $translator;
+    protected Translator $translator;
 
-    /**
-     * @return string
-     */
-    public function indexAction()
+    public function indexAction(): void
     {
         $account = $this->securityContext->getAccount();
         if ($account) {
@@ -46,28 +42,14 @@ class LoginController extends \Neos\Flow\Security\Authentication\Controller\Abst
         }
     }
 
-
-    /**
-     * Is called if authentication was successful.
-     *
-     * @param \Neos\Flow\Mvc\ActionRequest $originalRequest The request that was intercepted by the security framework, NULL if there was none
-     * @return string
-     */
-    public function onAuthenticationSuccess(\Neos\Flow\Mvc\ActionRequest $originalRequest = null)
+    public function onAuthenticationSuccess(\Neos\Flow\Mvc\ActionRequest $originalRequest = null): void
     {
         $message = $this->translator->translateById('loginSuccess', [], null, null, 'Main', 'AchimFritz.ChampionShip');
         $this->addFlashMessage($message, '', \Neos\Error\Messages\Message::SEVERITY_OK);
         $this->redirect('index', 'Standard', 'AchimFritz.ChampionShip\\Generic');
     }
 
-    /**
-     * Logs all active tokens out. Override this, if you want to
-     * have some custom action here. You can always call the parent
-     * method to do the actual logout.
-     *
-     * @return void
-     */
-    public function logoutAction()
+    public function logoutAction(): void
     {
         parent::logoutAction();
         $message = $this->translator->translateById('logoutSuccess', [], null, null, 'Main', 'AchimFritz.ChampionShip');
@@ -75,28 +57,13 @@ class LoginController extends \Neos\Flow\Security\Authentication\Controller\Abst
         $this->redirect('index', 'Standard', 'AchimFritz.ChampionShip\\Generic');
     }
 
-    /**
-     * Is called if authentication failed.
-     *
-     * Override this method in your login controller to take any
-     * custom action for this event. Most likely you would want
-     * to redirect to some action showing the login form again.
-     *
-     * @param \Neos\Flow\Security\Exception\AuthenticationRequiredException $exception The exception thrown while the authentication process
-     * @return void
-     */
-    protected function onAuthenticationFailure(\Neos\Flow\Security\Exception\AuthenticationRequiredException $exception = null)
+    protected function onAuthenticationFailure(\Neos\Flow\Security\Exception\AuthenticationRequiredException $exception = null): void
     {
         $message = $this->translator->translateById('loginFailed', [], null, null, 'Main', 'AchimFritz.ChampionShip');
         $this->addFlashMessage($message, '', \Neos\Error\Messages\Message::SEVERITY_ERROR);
     }
 
-    /**
-     * Collects the errors and serves them
-     *
-     * @return void
-     */
-    protected function errorAction()
+    protected function errorAction(): void
     {
         $this->redirect('index', 'Standard', 'AchimFritz.ChampionShip\\Generic');
     }

@@ -34,7 +34,7 @@ class IfIsGroupRoundViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abstra
         return (string)$this->renderElseChild();
     }
 
-    protected static function evaluateCondition($arguments = null, RenderingContextInterface $renderingContext): bool
+    protected static function evaluateCondition($arguments, RenderingContextInterface $renderingContext): bool
     {
         return $arguments['round'] instanceof GroupRound;
     }

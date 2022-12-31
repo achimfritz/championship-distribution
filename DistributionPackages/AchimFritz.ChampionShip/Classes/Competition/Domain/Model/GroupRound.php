@@ -137,6 +137,7 @@ class GroupRound extends Round
     {
         // required ?
         $this->groupTableRows->clear();
+        $rows = [];
         foreach ($matches as $match) {
             $team = $match->getHostTeam();
             $teams[$team->getName()] = $team;

@@ -36,7 +36,7 @@ class IfIsJustKoMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abstr
         return (string)$this->renderElseChild();
     }
 
-    protected static function evaluateCondition($arguments = null, RenderingContextInterface $renderingContext): bool
+    protected static function evaluateCondition($arguments, RenderingContextInterface $renderingContext): bool
     {
         $match = $arguments['match'];
         if ($match instanceof KoMatch === true && $match instanceof CrossGroupMatch === false && $match instanceof TeamsOfTwoMatchesMatch === false) {

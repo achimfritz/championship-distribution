@@ -34,7 +34,7 @@ class IfIsChildKoRoundViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abst
         return (string)$this->renderElseChild();
     }
 
-    protected static function evaluateCondition($arguments = null, RenderingContextInterface $renderingContext): bool
+    protected static function evaluateCondition($arguments, RenderingContextInterface $renderingContext): bool
     {
         return $arguments['round'] instanceof ChildKoRound;
     }

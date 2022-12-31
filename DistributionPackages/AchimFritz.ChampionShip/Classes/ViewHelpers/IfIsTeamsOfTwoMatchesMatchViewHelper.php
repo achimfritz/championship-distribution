@@ -34,7 +34,7 @@ class IfIsTeamsOfTwoMatchesMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewH
         return (string)$this->renderElseChild();
     }
 
-    protected static function evaluateCondition($arguments = null, RenderingContextInterface $renderingContext): bool
+    protected static function evaluateCondition($arguments, RenderingContextInterface $renderingContext): bool
     {
         return $arguments['match'] instanceof TeamsOfTwoMatchesMatch;
     }
