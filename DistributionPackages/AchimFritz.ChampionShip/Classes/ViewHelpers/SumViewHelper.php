@@ -22,7 +22,7 @@ use Neos\Flow\Annotations as Flow;
 class SumViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
 
-    
+
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()
@@ -30,14 +30,17 @@ class SumViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelpe
      */
     protected $escapeOutput = false;
 
-    /**
-     * render
-     * @param number $summandOne
-     * @param number $summandTwo
-     * @return number
-     */
-    public function render($summandOne, $summandTwo)
+    public function initializeArguments()
     {
-        return $summandOne + $summandTwo;
+        parent::initializeArguments();
+        $this->registerArgument('summandOne', 'int', 'summandOne', true);
+        $this->registerArgument('summandTwo', 'int', 'summandTwo', true);
+    }
+
+    public function render(): int
+    {
+        $summandOne = $this->arguments['summandOne'];
+        $summandTwo = $this->arguments['summandTwo'];
+        return (int)$summandOne + $summandTwo;
     }
 }

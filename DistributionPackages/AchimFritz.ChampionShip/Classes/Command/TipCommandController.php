@@ -17,19 +17,19 @@ use \AchimFritz\ChampionShip\Tip\Domain\Model\Ranking;
  */
 class TipCommandController extends \Neos\Flow\Cli\CommandController
 {
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
      */
     protected $cupRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      */
     protected $tipRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
@@ -41,14 +41,14 @@ class TipCommandController extends \Neos\Flow\Cli\CommandController
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\RoundRepository
      */
     protected $roundRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupMatchRepository
      */
     protected $groupMatchRepository;
 
-    
+
     /**
      * listCommand
      *
@@ -58,7 +58,7 @@ class TipCommandController extends \Neos\Flow\Cli\CommandController
     {
         $cup = $this->cupRepository->findOneByName('em 2008');
         #$user = $this->userRepository->findOneByUsername('af@achimfritz.de');
-        $user = $this->userRepository->findOneByUsername('af@achimfritz.de');
+        $user = $this->userRepository->findOneByUsername('achim');
         $tips = $this->tipRepository->findByCup($cup);
         $this->outputLine('found ' . count($tips) . ' tips in cup ' . $cup->getName());
         $tips = $this->tipRepository->findByUserInCup($user, $cup);

@@ -23,7 +23,7 @@ use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
 class TipPointsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
 
-    
+
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()
@@ -31,14 +31,15 @@ class TipPointsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractVie
      */
     protected $escapeOutput = false;
 
-    /**
-     * render
-     *
-     * @param Tip $tip
-     * @return string
-     */
-    public function render(Tip $tip)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('tip', Tip::class, 'tip', true);
+    }
+
+    public function render(): string
+    {
+        $tip = $this->arguments['tip'];
         if ($tip->getPoints() == 2) {
             return '<span class="icon-circle-arrow-up"></span>';
         } elseif ($tip->getPoints() == 1) {

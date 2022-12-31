@@ -39,14 +39,17 @@ class RestUriViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewH
      */
     protected $securityContext;
 
-    /**
-     * render
-     * @param object $object
-     * @param string|NULL subpackage
-     * @return string
-     */
-    public function render($object, $subpackage = null)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('object', 'object', 'object', true);
+        $this->registerArgument('subpackage', 'string', 'subpackage', false);
+    }
+
+    public function render(): string
+    {
+        $object = $this->arguments['object'];
+        $subpackage = $this->arguments['subpackage'] ?? null;
         $name = get_class($object);
         $parts = explode('\\', $name);
         $model = array_pop($parts);

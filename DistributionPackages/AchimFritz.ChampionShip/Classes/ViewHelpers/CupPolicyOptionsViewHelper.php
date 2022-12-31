@@ -23,7 +23,7 @@ use Neos\Flow\Reflection\ClassReflection;
 class CupPolicyOptionsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
 
-    
+
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()
@@ -31,15 +31,18 @@ class CupPolicyOptionsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abst
      */
     protected $escapeOutput = false;
 
-    /**
-     * render
-     *
-     * workaround for http://lists.typo3.org/pipermail/typo3-project-typo3v4mvc/2011-May/009509.html
-     * @param string $prefix
-     * @return array
-     */
-    public function render($prefix)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('prefix', 'string', 'prefix', true);
+    }
+
+    /**
+     * workaround for http://lists.typo3.org/pipermail/typo3-project-typo3v4mvc/2011-May/009509.html
+     */
+    public function render(): array
+    {
+        $prefix = $this->arguments['prefix'];
         $classReflection = new ClassReflection('AchimFritz\ChampionShip\Competition\Domain\Model\Cup');
         $constants = $classReflection->getConstants();
         $options = array();

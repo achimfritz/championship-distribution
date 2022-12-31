@@ -58,14 +58,15 @@ class UserTipViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewH
      */
     protected $policyService;
 
-    /**
-     * render
-     *
-     * @param GeneralMatch $match
-     * @return string
-     */
-    public function render(GeneralMatch $match)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('match', GeneralMatch::class, 'match', true);
+    }
+
+    public function render(): string
+    {
+        $match = $this->arguments['match'];
         $renderChildrenClosure = $this->buildRenderChildrenClosure();
         $userRole = $this->policyService->getRole('AchimFritz.ChampionShip:User');
         $account = $this->securityContext->getAccount();

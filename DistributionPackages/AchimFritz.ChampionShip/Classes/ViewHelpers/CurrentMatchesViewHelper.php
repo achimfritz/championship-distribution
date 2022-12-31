@@ -12,6 +12,7 @@ namespace AchimFritz\ChampionShip\ViewHelpers;
  *                                                                        */
 
 use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Repository\GeneralMatchRepository;
 use Neos\Flow\Annotations as Flow;
 
 /**
@@ -33,19 +34,22 @@ class CurrentMatchesViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abstra
 
     /**
      * @Flow\Inject
-     * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GeneralMatchRepository
      */
-    protected $matchRepository;
+    protected GeneralMatchRepository $matchRepository;
 
-
-    /**
-     * @param \AchimFritz\ChampionShip\Competition\Domain\Model\Cup $cup
-     * @param integer $limit
-     * @param boolean $past
-     * @return void
-     */
-    public function render(Cup $cup, $limit = 2, $past = true)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('cup', Cup::class, 'cup', true);
+        $this->registerArgument('limit', 'int', 'limit');
+        $this->registerArgument('past', 'bool', 'past');
+    }
+
+    public function render(): string
+    {
+        $cup = $this->arguments['cup'];
+        $limit = $this->arguments['limit'] ?? 2;
+        $past = (bool)($this->arguments['past'] ?? true);
         if ($past === true) {
             $matches = $this->matchRepository->findLastByCup($cup, $limit);
         } else {

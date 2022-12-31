@@ -22,7 +22,7 @@ use Neos\Flow\Annotations as Flow;
 class StrToUpperViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
 
-    
+
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()
@@ -30,14 +30,15 @@ class StrToUpperViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractVi
      */
     protected $escapeOutput = false;
 
-    /**
-     * render
-     *
-     * @param string value
-     * @return string
-     */
-    public function render($value)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('value', 'string', 'value', true);
+    }
+
+    public function render(): string
+    {
+        $value = $this->arguments['value'];
         return strtoupper($value);
     }
 }
