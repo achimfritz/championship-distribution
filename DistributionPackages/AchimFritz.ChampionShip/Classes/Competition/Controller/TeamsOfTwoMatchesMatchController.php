@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
 
 /**
  * Match controller for the AchimFritz.ChampionShip package
@@ -16,13 +17,12 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
  */
 class TeamsOfTwoMatchesMatchController extends MatchController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamsOfTwoMatchesMatchRepository
      */
     protected $matchRepository;
-        
+
     /**
      * Adds the given new match object to the cup repository
      *
@@ -32,7 +32,7 @@ class TeamsOfTwoMatchesMatchController extends MatchController
     public function createAction(TeamsOfTwoMatchesMatch $match)
     {
         $this->createMatch($match);
-        $this->redirect('index', null, null, array('match' => $match, 'cup' => $match->getCup()));
+        $this->redirect('index', null, null, ['match' => $match, 'cup' => $match->getCup()]);
     }
 
     /**
@@ -44,7 +44,7 @@ class TeamsOfTwoMatchesMatchController extends MatchController
     public function deleteAction(TeamsOfTwoMatchesMatch $match)
     {
         $this->deleteMatch($match);
-        $this->redirect('index', 'KoRound', null, array('round' => $match->getRound(), 'cup' => $match->getCup()));
+        $this->redirect('index', 'KoRound', null, ['round' => $match->getRound(), 'cup' => $match->getCup()]);
     }
 
     /**
@@ -56,6 +56,6 @@ class TeamsOfTwoMatchesMatchController extends MatchController
     public function updateAction(TeamsOfTwoMatchesMatch $match)
     {
         $this->updateMatch($match);
-        $this->redirect('index', null, null, array('match' => $match, 'cup' => $match->getCup()));
+        $this->redirect('index', null, null, ['match' => $match, 'cup' => $match->getCup()]);
     }
 }

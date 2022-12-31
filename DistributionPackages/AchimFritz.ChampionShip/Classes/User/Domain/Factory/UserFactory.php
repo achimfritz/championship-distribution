@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Factory;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\RegistrationRequest;
  */
 class UserFactory
 {
-
     /**
      * @var \Neos\Flow\Security\AccountFactory
      * @Flow\Inject
@@ -42,7 +42,7 @@ class UserFactory
         $identifier = $name;
         $user = new User();
         $user->setEmail($email);
-        $account = $this->accountFactory->createAccountWithPassword($identifier, $password, array('AchimFritz.ChampionShip:User'));
+        $account = $this->accountFactory->createAccountWithPassword($identifier, $password, ['AchimFritz.ChampionShip:User']);
         $user->setAccount($account);
         return $user;
     }
@@ -59,7 +59,7 @@ class UserFactory
         }
         $user = new User();
         $user->setEmail($registrationRequest->getEmail());
-        $account = $this->accountFactory->createAccountWithPassword($registrationRequest->getUsername(), 'notBeUsed', array('AchimFritz.ChampionShip:User'));
+        $account = $this->accountFactory->createAccountWithPassword($registrationRequest->getUsername(), 'notBeUsed', ['AchimFritz.ChampionShip:User']);
         $account->setCredentialsSource($registrationRequest->getNewPassword());
         $user->setAccount($account);
         $user->setTipGroup($tipGroup);

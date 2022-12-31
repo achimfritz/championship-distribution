@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -7,8 +8,8 @@ namespace AchimFritz\ChampionShip\Command;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\GroupMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Model\GroupMatch;
 
 /**
  * GroupMatch Command Controller for the AchimFritz.ChampionShip package
@@ -17,13 +18,12 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\GroupMatch;
  */
 class GroupMatchCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupMatchRepository
      */
     protected $groupMatchRepository;
-    
+
     /**
      * list
      *

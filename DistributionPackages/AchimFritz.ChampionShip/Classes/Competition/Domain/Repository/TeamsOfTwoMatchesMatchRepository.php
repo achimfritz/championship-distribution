@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch;
  */
 class TeamsOfTwoMatchesMatchRepository extends KoMatchRepository
 {
-
     /**
      * findOneByHostMatchAndWinner
      *
@@ -29,11 +29,11 @@ class TeamsOfTwoMatchesMatchRepository extends KoMatchRepository
     {
         $query = $this->createQuery();
         return $query->matching(
-                $query->logicalAnd(
-                    $query->equals('hostMatch', $match),
-                    $query->equals('hostMatchIsWinner', $isWinner)
-                    )
-                )
+            $query->logicalAnd(
+                $query->equals('hostMatch', $match),
+                $query->equals('hostMatchIsWinner', $isWinner)
+            )
+        )
             ->execute()->getFirst();
     }
 
@@ -48,11 +48,11 @@ class TeamsOfTwoMatchesMatchRepository extends KoMatchRepository
     {
         $query = $this->createQuery();
         return $query->matching(
-                $query->logicalAnd(
-                    $query->equals('guestMatch', $match),
-                    $query->equals('guestMatchIsWinner', $isWinner)
-                    )
-                )
+            $query->logicalAnd(
+                $query->equals('guestMatch', $match),
+                $query->equals('guestMatchIsWinner', $isWinner)
+            )
+        )
             ->execute()->getFirst();
     }
 }

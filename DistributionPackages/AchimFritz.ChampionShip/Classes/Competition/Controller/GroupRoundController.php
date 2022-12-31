@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -8,7 +9,7 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
 
 use Neos\Flow\Annotations as Flow;
 
-use \AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
+use AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
 
 /**
  * GroupRound controller for the AchimFritz.ChampionShip package
@@ -17,13 +18,12 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
  */
 class GroupRoundController extends RoundController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
      */
     protected $roundRepository;
-    
+
 
     /**
      * createAction
@@ -34,7 +34,7 @@ class GroupRoundController extends RoundController
     public function createAction(GroupRound $round)
     {
         $this->createRound($round);
-        $this->redirect('index', null, null, array('cup' => $round->getCup(), 'round' => $round));
+        $this->redirect('index', null, null, ['cup' => $round->getCup(), 'round' => $round]);
     }
 
     /**
@@ -46,7 +46,7 @@ class GroupRoundController extends RoundController
     public function updateAction(GroupRound $round)
     {
         $this->updateRound($round);
-        $this->redirect('index', null, null, array('cup' => $round->getCup(), 'round' => $round));
+        $this->redirect('index', null, null, ['cup' => $round->getCup(), 'round' => $round]);
     }
 
     /**
@@ -58,6 +58,6 @@ class GroupRoundController extends RoundController
     public function deleteAction(GroupRound $round)
     {
         $this->deleteRound($round);
-        $this->redirect('index', null, null, array('cup' => $round->getCup()));
+        $this->redirect('index', null, null, ['cup' => $round->getCup()]);
     }
 }

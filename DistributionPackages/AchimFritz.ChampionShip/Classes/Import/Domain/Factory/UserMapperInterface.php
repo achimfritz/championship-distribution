@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -14,7 +15,6 @@ use AchimFritz\ChampionShip\Domain\Model\User;
  */
 interface UserMapperInterface
 {
-
     /**
      * ignoredUsers
      *

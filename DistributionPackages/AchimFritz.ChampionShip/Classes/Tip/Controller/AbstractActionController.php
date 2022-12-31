@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -9,7 +10,7 @@ namespace AchimFritz\ChampionShip\Tip\Controller;
 use Neos\Flow\Annotations as Flow;
 use Neos\Error\Messages\Message;
 use Neos\Flow\Security\Account;
-use \AchimFritz\ChampionShip\User\Domain\Model\User;
+use AchimFritz\ChampionShip\User\Domain\Model\User;
 
 /**
  * Action controller for the AchimFritz.ChampionShip package
@@ -18,7 +19,6 @@ use \AchimFritz\ChampionShip\User\Domain\Model\User;
  */
 class AbstractActionController extends \AchimFritz\ChampionShip\Competition\Controller\AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
@@ -63,7 +63,7 @@ class AbstractActionController extends \AchimFritz\ChampionShip\Competition\Cont
     {
         if ($this->user === null && $this->account !== null) {
             // must be an admin
-            $this->addFlashMessage($e->getMessage(), get_class($e), Message::SEVERITY_ERROR, array(), $e->getCode());
+            $this->addFlashMessage($e->getMessage(), get_class($e), Message::SEVERITY_ERROR, [], $e->getCode());
         }
     }
 }

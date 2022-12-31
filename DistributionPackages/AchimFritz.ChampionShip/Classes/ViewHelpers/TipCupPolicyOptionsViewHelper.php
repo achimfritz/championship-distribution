@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\ViewHelpers;
 
 /*                                                                        *
@@ -22,8 +23,6 @@ use Neos\Flow\Reflection\ClassReflection;
  */
 class TipCupPolicyOptionsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
-
-
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()
@@ -45,7 +44,7 @@ class TipCupPolicyOptionsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\A
         $prefix = $this->arguments['prefix'];
         $classReflection = new ClassReflection('AchimFritz\ChampionShip\Tip\Domain\Model\TipCup');
         $constants = $classReflection->getConstants();
-        $options = array();
+        $options = [];
         foreach ($constants as $name => $val) {
             if (strpos($name, $prefix) !== false) {
                 $name = str_replace($prefix . '_', '', $name);

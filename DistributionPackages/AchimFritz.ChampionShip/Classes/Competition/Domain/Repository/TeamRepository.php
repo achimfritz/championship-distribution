@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -15,13 +16,12 @@ use Neos\Flow\Annotations as Flow;
  */
 class TeamRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * @return void
      */
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('name' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['name' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING]);
     }
 }

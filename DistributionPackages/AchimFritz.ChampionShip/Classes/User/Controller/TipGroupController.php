@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -12,7 +13,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\TipGroup;
 
 class TipGroupController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\TipGroupRepository
@@ -63,7 +63,7 @@ class TipGroupController extends AbstractActionController
             $this->addErrorMessage('cannot create tipGroup');
             $this->handleException($e);
         }
-        $this->redirect('index', null, null, array('tipGroup' => $tipGroup));
+        $this->redirect('index', null, null, ['tipGroup' => $tipGroup]);
     }
 
     /**
@@ -80,7 +80,7 @@ class TipGroupController extends AbstractActionController
             $this->addErrorMessage('cannot update tipGroup');
             $this->handleException($e);
         }
-        $this->redirect('index', null, null, array('tipGroup' => $tipGroup));
+        $this->redirect('index', null, null, ['tipGroup' => $tipGroup]);
     }
 
     /**

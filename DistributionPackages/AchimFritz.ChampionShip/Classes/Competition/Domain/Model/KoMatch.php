@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class KoMatch extends GeneralMatch
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\KoRound
      * @ORM\ManyToOne

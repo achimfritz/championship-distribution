@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GeneralMatch
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\Team
      * @ORM\ManyToOne
@@ -167,10 +167,10 @@ class GeneralMatch
             return false;
         }
         if (
-                ($hostTeam === $teamOne and
-                 $guestTeam === $teamTwo) or
-                ($hostTeam === $teamTwo and
-                 $guestTeam === $teamOne)) {
+            ($hostTeam === $teamOne and
+             $guestTeam === $teamTwo) or
+            ($hostTeam === $teamTwo and
+             $guestTeam === $teamOne)) {
             return true;
         } else {
             return false;

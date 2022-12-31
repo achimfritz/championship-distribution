@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -25,7 +26,6 @@ use AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch;
  */
 class KoMatchFactory
 {
-
     /**
      * @var \Neos\Flow\Persistence\PersistenceManagerInterface
      * @Flow\Inject
@@ -123,7 +123,7 @@ class KoMatchFactory
             return $this->createCrossGroupMatch($match, $cup);
         }
         $rank = substr($guest, 0, 1);
-        $groupNames = array();
+        $groupNames = [];
         for ($i = 1; $i < strlen($guest); $i++) {
             $groupNames[] = $guest[$i];
         }

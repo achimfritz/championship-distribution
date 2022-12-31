@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GeneralMatch;
  */
 class MatchTipController extends AbstractTipGroupController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GeneralMatchRepository

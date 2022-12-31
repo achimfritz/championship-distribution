@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -8,7 +9,7 @@ namespace AchimFritz\ChampionShip\Tip\Controller;
 
 use Neos\Flow\Annotations as Flow;
 
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Round;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Round;
 
 /**
  * GroupRound controller for the AchimFritz.ChampionShip package
@@ -17,7 +18,6 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\Round;
  */
 class GroupRoundTipController extends AbstractActionController
 {
-    
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
@@ -29,7 +29,7 @@ class GroupRoundTipController extends AbstractActionController
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      */
     protected $tipRepository;
-    
+
     /**
      * showAction
      *

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Command;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
 
 /**
  * GroupRound command controller for the AchimFritz.ChampionShip package
@@ -16,7 +17,6 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class KoRoundCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \Neos\Flow\Persistence\PersistenceManagerInterface
@@ -46,7 +46,7 @@ class KoRoundCommandController extends \Neos\Flow\Cli\CommandController
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
      */
     protected $cupRepository;
-    
+
 
     /**
      * list

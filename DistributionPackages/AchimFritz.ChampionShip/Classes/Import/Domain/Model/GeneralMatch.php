@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Model;
 
 /*                                                                        *
@@ -14,11 +15,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GeneralMatch
 {
-
-   /**
-    * @var string
-    * @Flow\Validate(type="NotEmpty")
-    */
+    /**
+     * @var string
+     * @Flow\Validate(type="NotEmpty")
+     */
     protected $cupName;
 
     /**

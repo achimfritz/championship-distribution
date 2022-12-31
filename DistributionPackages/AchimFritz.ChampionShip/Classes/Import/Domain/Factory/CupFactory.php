@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -17,11 +18,10 @@ use AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch;
  */
 class CupFactory
 {
-
-   /**
-    * @Flow\Inject
-    * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
-    */
+    /**
+     * @Flow\Inject
+     * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
+     */
     protected $cupRepository;
 
     /**

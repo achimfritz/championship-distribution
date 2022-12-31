@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\Password;
  */
 class PasswordRequestController extends AbstractActionController
 {
-
     /**
      * @var \Neos\Flow\Security\Cryptography\HashService
      * @Flow\Inject
@@ -36,7 +36,7 @@ class PasswordRequestController extends AbstractActionController
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\ForgotPasswordRequestRepository
      */
     protected $forgotPasswordRequestRepository;
-    
+
     /**
      * @var string
      */

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Chat\Domain\Repository;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Persistence\QueryInterface;
  */
 class ChatEntryRepository extends Repository
 {
-
     /**
      * __construct
      *
@@ -24,6 +24,6 @@ class ChatEntryRepository extends Repository
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('creationDate' => QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['creationDate' => QueryInterface::ORDER_ASCENDING]);
     }
 }

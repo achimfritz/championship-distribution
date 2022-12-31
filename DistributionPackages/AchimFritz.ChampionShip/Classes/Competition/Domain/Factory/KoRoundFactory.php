@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Factory;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\ChildKoRound;
  */
 class KoRoundFactory
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Factory\KoMatchFactory

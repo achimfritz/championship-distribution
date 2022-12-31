@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Mvc\View;
 
 use AchimFritz\ChampionShip\Competition\Domain\Model\CrossGroupMatch;
@@ -9,9 +10,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
 
 class MatchesJsonView extends JsonView
 {
-
-
-
     /**
      * Transforms the value view variable to a serializable
      * array represantion using a YAML view configuration and JSON encodes
@@ -23,27 +21,27 @@ class MatchesJsonView extends JsonView
     public function render(): string
     {
         $matches = $this->variables['matches'];
-        $res = array();
+        $res = [];
         foreach ($matches as $match) {
-            $json = array(
+            $json = [
                 'startDate' => $match->getStartDate()->format('d.m.Y H:i'),
                 'startDateXs' => $match->getStartDate()->format('d.m H:i'),
                 'name' => $match->getName()
-            );
+            ];
             if ($match->getResult() !== null) {
-                $json['result'] = array(
+                $json['result'] = [
                     'hostTeamGoals' => $match->getResult()->getHostTeamGoals(),
                     'guestTeamGoals' => $match->getResult()->getGuestTeamGoals(),
-                );
+                ];
             }
             $team = $match->getHostTeam();
             if ($team instanceof Team) {
                 $team = $match->getHostTeam();
-                $json['hostTeam'] = array(
+                $json['hostTeam'] = [
                     'name' => $team->getName(),
                     'iso2' => $team->getIso2(),
                     'iso3' => $team->getIso3Upper()
-                );
+                ];
             } else {
                 if ($match instanceof CrossGroupMatch) {
                     if ($match instanceof CrossGroupWithThirdsMatch) {
@@ -61,16 +59,16 @@ class MatchesJsonView extends JsonView
             }
             $team = $match->getGuestTeam();
             if ($team instanceof Team) {
-                $json['guestTeam'] = array(
+                $json['guestTeam'] = [
                     'name' => $team->getName(),
                     'iso2' => $team->getIso2(),
                     'iso3' => $team->getIso3Upper()
-                );
+                ];
             } else {
                 if ($match instanceof CrossGroupMatch) {
                     if ($match instanceof CrossGroupWithThirdsMatch) {
                         $rounds = $match->getGuestGroupRounds();
-                        $roundName = array();
+                        $roundName = [];
                         foreach ($rounds as $round) {
                             $roundName[] = $round->getName();
                         }
@@ -90,6 +88,6 @@ class MatchesJsonView extends JsonView
             }
             $res[] = $json;
         }
-        return json_encode(array('matches' => $res));
+        return json_encode(['matches' => $res]);
     }
 }

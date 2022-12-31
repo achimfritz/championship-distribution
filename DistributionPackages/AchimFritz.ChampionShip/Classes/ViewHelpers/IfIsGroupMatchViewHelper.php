@@ -20,7 +20,6 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 
 class IfIsGroupMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractConditionViewHelper
 {
-
     public function initializeArguments()
     {
         parent::initializeArguments();

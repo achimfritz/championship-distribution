@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Repository;
 
 /*                                                                        *
@@ -13,7 +14,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class RegistrationRequestRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * @var \Neos\Flow\Security\Cryptography\HashService
      * @Flow\Inject

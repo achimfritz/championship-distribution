@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Service;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Neos\Flow\Utility\Algorithms as UtilityAlgorithms;
  */
 class ForgotPasswordRequestService
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository

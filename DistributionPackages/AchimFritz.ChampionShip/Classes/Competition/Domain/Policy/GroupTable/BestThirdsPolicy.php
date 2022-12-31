@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class BestThirdsPolicy
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\ExtraPointRepository
@@ -28,11 +28,11 @@ class BestThirdsPolicy
      */
     public function updateTable(array $rows)
     {
-        $points = array();
-        $goalsDiff = array();
-        $goalsPlus = array();
-        $names = array();
-        $extraPoints = array();
+        $points = [];
+        $goalsDiff = [];
+        $goalsPlus = [];
+        $names = [];
+        $extraPoints = [];
         foreach ($rows as $name => $row) {
             $points[] = $row->getPoints();
             $goalsDiff[] = $row->getGoalsDiff();

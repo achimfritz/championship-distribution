@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -14,7 +15,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ExtraPoint
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\Team
      * @ORM\ManyToOne

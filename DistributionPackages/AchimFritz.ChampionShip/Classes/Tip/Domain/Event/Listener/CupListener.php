@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Event\Listener;
 
 use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
@@ -11,7 +12,6 @@ use AchimFritz\ChampionShip\Tip\Domain\Model\CupRanking;
  */
 class CupListener
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      * @Flow\Inject

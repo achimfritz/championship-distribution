@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -12,7 +13,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\ExtraPoint;
 
 class ExtraPointController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\ExtraPointRepository

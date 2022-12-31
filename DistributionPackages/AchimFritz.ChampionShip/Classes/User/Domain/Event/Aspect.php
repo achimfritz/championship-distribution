@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Event;
 
 use Neos\Flow\Annotations as Flow;
@@ -10,7 +11,6 @@ use Neos\Flow\Aop\JoinPointInterface;
  */
 class Aspect
 {
-
     /**
      * @Flow\Inject
      * @var \Neos\Flow\SignalSlot\Dispatcher

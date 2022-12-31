@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Repository;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\TipGroup;
  */
 class UserRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * @Flow\Inject
      * @var \Neos\Flow\Security\AccountRepository
@@ -41,7 +41,7 @@ class UserRepository extends \Neos\Flow\Persistence\Repository
      */
     public function findInTipGroups(\Doctrine\Common\Collections\Collection $tipGroups)
     {
-        $constraints = array();
+        $constraints = [];
         $query = $this->createQuery();
         foreach ($tipGroups as $tipGroup) {
             $constraints[] = $query->contains('tipGroups', $tipGroup);
@@ -57,7 +57,7 @@ class UserRepository extends \Neos\Flow\Persistence\Repository
      */
     public function findInTipGroupsAndEnabled(\Doctrine\Common\Collections\Collection $tipGroups)
     {
-        $constraints = array();
+        $constraints = [];
         $query = $this->createQuery();
         foreach ($tipGroups as $tipGroup) {
             $constraints[] = $query->contains('tipGroups', $tipGroup);
@@ -80,8 +80,8 @@ class UserRepository extends \Neos\Flow\Persistence\Repository
     {
         $query = $this->createQuery();
         return $query->matching(
-                    $query->equals('account.accountIdentifier', $accountIdentifier)
-                )
+            $query->equals('account.accountIdentifier', $accountIdentifier)
+        )
             ->execute()->getFirst();
     }
 
@@ -96,11 +96,11 @@ class UserRepository extends \Neos\Flow\Persistence\Repository
     {
         $query = $this->createQuery();
         return $query->matching(
-                $query->logicalAnd(
-                    $query->equals('account.accountIdentifier', $identifier),
-                    $query->equals('email', $email)
-                    )
-                )
+            $query->logicalAnd(
+                $query->equals('account.accountIdentifier', $identifier),
+                $query->equals('email', $email)
+            )
+        )
             ->execute()->getFirst();
     }
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Model;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Tip
 {
-
     /**
      * The user
      * @var \AchimFritz\ChampionShip\User\Domain\Model\User

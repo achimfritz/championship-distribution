@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Service;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class RankingService
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
@@ -71,8 +71,8 @@ class RankingService
             $this->cupRankingRepository->remove($cupRanking);
         }
         $users = $this->userRepository->findAll();
-        $rankings = array();
-        $points = array();
+        $rankings = [];
+        $points = [];
         $matches = $this->matchRepository->findByCup($cup);
         foreach ($users as $user) {
             $ranking = new CupRanking();
@@ -114,8 +114,8 @@ class RankingService
     {
         $this->rankingRepository->removeAll();
         $users = $this->userRepository->findAll();
-        $rankings = array();
-        $points = array();
+        $rankings = [];
+        $points = [];
         foreach ($users as $user) {
             $ranking = new Ranking();
             $ranking->setUser($user);

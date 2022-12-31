@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
  */
 class GroupMatchCreatorController extends \AchimFritz\ChampionShip\Generic\Controller\AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
@@ -46,6 +46,6 @@ class GroupMatchCreatorController extends \AchimFritz\ChampionShip\Generic\Contr
             $this->addErrorMessage('cannot update matches');
             $this->handleException($e);
         }
-        $this->redirect('index', 'GroupRound', null, array('round' => $groupRound));
+        $this->redirect('index', 'GroupRound', null, ['round' => $groupRound]);
     }
 }

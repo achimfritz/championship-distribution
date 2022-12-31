@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Policy\TipPoints;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class ThreeOnePolicy extends DefaultPolicy
 {
-
     /**
      * @var integer
      */

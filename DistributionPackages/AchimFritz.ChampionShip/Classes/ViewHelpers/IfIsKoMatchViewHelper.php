@@ -26,7 +26,6 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
  */
 class IfIsKoMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractConditionViewHelper
 {
-
     public function initializeArguments()
     {
         parent::initializeArguments();
@@ -45,5 +44,4 @@ class IfIsKoMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractC
     {
         return $arguments['match'] instanceof KoMatch;
     }
-
 }

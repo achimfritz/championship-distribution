@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\Password;
  */
 class PasswordController extends AbstractActionController
 {
-
     /**
      * @var \Neos\Flow\Security\Cryptography\HashService
      * @Flow\Inject
@@ -29,7 +29,7 @@ class PasswordController extends AbstractActionController
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
      */
     protected $userRepository;
-    
+
     /**
      * @var string
      */
@@ -53,6 +53,6 @@ class PasswordController extends AbstractActionController
             $this->addErrorMessage('cannot update password');
             $this->handleException($e);
         }
-        $this->redirect('index', 'User', null, array('user' => $password->getUser()));
+        $this->redirect('index', 'User', null, ['user' => $password->getUser()]);
     }
 }

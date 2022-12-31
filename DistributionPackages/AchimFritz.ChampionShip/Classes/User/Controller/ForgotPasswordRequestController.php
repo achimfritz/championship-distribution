@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -12,7 +13,6 @@ use AchimFritz\ChampionShip\Generic\Controller\AbstractActionController;
 
 class ForgotPasswordRequestController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\ForgotPasswordRequestRepository

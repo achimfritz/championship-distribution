@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Model;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use Neos\Flow\Security\Account;
  */
 class User
 {
-
     /**
      * @var \Neos\Flow\Security\Account
      * @ORM\OneToOne(cascade={"all"})

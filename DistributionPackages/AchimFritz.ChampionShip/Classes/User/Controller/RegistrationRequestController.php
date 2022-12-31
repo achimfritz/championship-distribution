@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -20,7 +21,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\RegistrationRequest;
  */
 class RegistrationRequestController extends AbstractActionController
 {
-
     /**
      * @var string
      */
@@ -151,7 +151,7 @@ class RegistrationRequestController extends AbstractActionController
             $this->addErrorMessage('cannot update registrationRequest');
             $this->handleException($e);
         }
-        $this->redirect('index', null, null, array('registrationRequest' => $registrationRequest));
+        $this->redirect('index', null, null, ['registrationRequest' => $registrationRequest]);
     }
 
     /**

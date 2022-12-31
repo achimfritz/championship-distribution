@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -8,7 +9,7 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
 
 use Neos\Flow\Annotations as Flow;
 
-use \AchimFritz\ChampionShip\Competition\Domain\Model\ChildKoRound;
+use AchimFritz\ChampionShip\Competition\Domain\Model\ChildKoRound;
 
 /**
  * ChildKoRound controller for the AchimFritz.ChampionShip package
@@ -17,13 +18,12 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\ChildKoRound;
  */
 class ChildKoRoundController extends RoundController
 {
-    
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\KoRoundRepository
      */
     protected $roundRepository;
-    
+
     /**
      * createAction
      *
@@ -33,7 +33,7 @@ class ChildKoRoundController extends RoundController
     public function createAction(ChildKoRound $round)
     {
         $this->createRound($round);
-        $this->redirect('index', 'KoRound', null, array('cup' => $round->getCup(), 'round' => $round));
+        $this->redirect('index', 'KoRound', null, ['cup' => $round->getCup(), 'round' => $round]);
     }
 
     /**
@@ -45,7 +45,7 @@ class ChildKoRoundController extends RoundController
     public function updateAction(ChildKoRound $round)
     {
         $this->updateRound($round);
-        $this->redirect('index', 'KoRound', null, array('cup' => $round->getCup(), 'round' => $round));
+        $this->redirect('index', 'KoRound', null, ['cup' => $round->getCup(), 'round' => $round]);
     }
 
     /**
@@ -57,6 +57,6 @@ class ChildKoRoundController extends RoundController
     public function deleteAction(ChildKoRound $round)
     {
         $this->deleteRound($round);
-        $this->redirect('index', 'KoRound', null, array('cup' => $round->getCup()));
+        $this->redirect('index', 'KoRound', null, ['cup' => $round->getCup()]);
     }
 }

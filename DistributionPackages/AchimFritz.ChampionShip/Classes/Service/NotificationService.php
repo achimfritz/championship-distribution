@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Service;
 
 /*                                                                        *
@@ -22,7 +23,6 @@ use Neos\SwiftMailer\Message;
  */
 class NotificationService
 {
-
     /**
      * @var array
      */
@@ -44,7 +44,7 @@ class NotificationService
     {
         $this->settings = $settings;
     }
-    
+
     /**
      * inviteUser
      *
@@ -72,7 +72,7 @@ class NotificationService
             ->setBody($body)
             ->send();
     }
-    
+
     /**
      * registrationFinished
      *
@@ -111,7 +111,7 @@ class NotificationService
         $uriBuilder = new UriBuilder();
         $uriBuilder->reset()->setRequest($actionRequest);
         $uriBuilder->setCreateAbsoluteUri(true);
-        $url = $uriBuilder->uriFor('index', array('hash' => $forgotPasswordRequest->getHash()), 'passwordRequest', 'AchimFritz.ChampionShip', 'User');
+        $url = $uriBuilder->uriFor('index', ['hash' => $forgotPasswordRequest->getHash()], 'passwordRequest', 'AchimFritz.ChampionShip', 'User');
 
         $from = $this->settings['mailFrom'];
         $to = $forgotPasswordRequest->getUser()->getEmail();

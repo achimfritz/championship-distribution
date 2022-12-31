@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
  */
 class GroupRoundCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
@@ -52,7 +52,7 @@ class GroupRoundCommandController extends \Neos\Flow\Cli\CommandController
     {
         $cup = $this->cupRepository->findOneRecent();
         #$groupRounds = $this->groupRoundRepository->findAll();
-        $groupRounds = array($this->groupRoundRepository->findOneByNameAndCup('E', $cup));
+        $groupRounds = [$this->groupRoundRepository->findOneByNameAndCup('E', $cup)];
         if (count($groupRounds)) {
             foreach ($groupRounds as $groupRound) {
                 $this->outputLine($groupRound->getName() . ' - ' . $groupRound->getWinnerTeam()->getName());
@@ -77,7 +77,6 @@ class GroupRoundCommandController extends \Neos\Flow\Cli\CommandController
                 $this->outputLine('no groupRounds found');
             }
         }
-
     }
 
     /**

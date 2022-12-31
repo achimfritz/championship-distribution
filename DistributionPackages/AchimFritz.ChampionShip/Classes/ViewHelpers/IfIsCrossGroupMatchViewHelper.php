@@ -38,5 +38,4 @@ class IfIsCrossGroupMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\A
     {
         return $arguments['match'] instanceof CrossGroupMatch;
     }
-
 }

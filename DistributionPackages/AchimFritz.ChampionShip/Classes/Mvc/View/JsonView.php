@@ -1,42 +1,42 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Mvc\View;
 
 class JsonView extends \AchimFritz\Rest\Mvc\View\JsonView
 {
-
     /**
      * @var array
      */
-    protected $configuration = array(
-        'cup' => array(
-            '_exclude' => array('team')
-        ),
-        'recentCup' => array(
-            '_exclude' => array('team')
-        ),
-        'match' => array(
-            '_exclude' => array('teamHasWonThisMatch', 'twoTeamsPlayThisMatch')
-        ),
-        'cups' => array(
-            '_descendAll' => array(
-                '_exclude' => array('team'),
-            )
-        ),
-        'matches' => array(
-            '_descendAll' => array(
+    protected $configuration = [
+        'cup' => [
+            '_exclude' => ['team']
+        ],
+        'recentCup' => [
+            '_exclude' => ['team']
+        ],
+        'match' => [
+            '_exclude' => ['teamHasWonThisMatch', 'twoTeamsPlayThisMatch']
+        ],
+        'cups' => [
+            '_descendAll' => [
+                '_exclude' => ['team'],
+            ]
+        ],
+        'matches' => [
+            '_descendAll' => [
                 //'_only' => array('name', 'startDate', 'result', 'hostTeam', 'guestTeam'),
-                '_exclude' => array('teamHasWonThisMatch', 'twoTeamsPlayThisMatch', 'cup', 'round'),
-            )
-        ),
-        'nextMatches' => array(
-            '_descendAll' => array(
-                '_exclude' => array('teamHasWonThisMatch', 'twoTeamsPlayThisMatch'),
-            )
-        ),
-        'lastMatches' => array(
-            '_descendAll' => array(
-                '_exclude' => array('teamHasWonThisMatch', 'twoTeamsPlayThisMatch'),
-            )
-        )
-    );
+                '_exclude' => ['teamHasWonThisMatch', 'twoTeamsPlayThisMatch', 'cup', 'round'],
+            ]
+        ],
+        'nextMatches' => [
+            '_descendAll' => [
+                '_exclude' => ['teamHasWonThisMatch', 'twoTeamsPlayThisMatch'],
+            ]
+        ],
+        'lastMatches' => [
+            '_descendAll' => [
+                '_exclude' => ['teamHasWonThisMatch', 'twoTeamsPlayThisMatch'],
+            ]
+        ]
+    ];
 }

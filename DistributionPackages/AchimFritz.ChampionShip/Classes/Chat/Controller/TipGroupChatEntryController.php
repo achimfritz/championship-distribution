@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Chat\Controller;
 
 /*                                                                        *
@@ -12,7 +13,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\TipGroup;
 
 class TipGroupChatEntryController extends AbstractChatEntryController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Chat\Domain\Repository\TipGroupChatEntryRepository
@@ -47,7 +47,7 @@ class TipGroupChatEntryController extends AbstractChatEntryController
     public function createAction(TipGroupChatEntry $chatEntry)
     {
         $this->createChatEntry($chatEntry);
-        $this->redirect('index', null, null, array('tipGroup' => $chatEntry->getTipGroup()));
+        $this->redirect('index', null, null, ['tipGroup' => $chatEntry->getTipGroup()]);
     }
 
     /**
@@ -57,7 +57,7 @@ class TipGroupChatEntryController extends AbstractChatEntryController
     public function updateAction(TipGroupChatEntry $chatEntry)
     {
         $this->updateChatEntry($chatEntry);
-        $this->redirect('index', null, null, array('tipGroup' => $chatEntry->getTipGroup()));
+        $this->redirect('index', null, null, ['tipGroup' => $chatEntry->getTipGroup()]);
     }
 
     /**
@@ -67,6 +67,6 @@ class TipGroupChatEntryController extends AbstractChatEntryController
     public function deleteAction(TipGroupChatEntry $chatEntry)
     {
         $this->deleteChatEntry($chatEntry);
-        $this->redirect('index', null, null, array('tipGroup' => $chatEntry->getTipGroup()));
+        $this->redirect('index', null, null, ['tipGroup' => $chatEntry->getTipGroup()]);
     }
 }

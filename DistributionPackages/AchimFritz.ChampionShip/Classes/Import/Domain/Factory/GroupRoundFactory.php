@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -18,11 +19,10 @@ use AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch;
  */
 class GroupRoundFactory
 {
-
-   /**
-    * @Flow\Inject
-    * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
-    */
+    /**
+     * @Flow\Inject
+     * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
+     */
     protected $groupRoundRepository;
 
     /**

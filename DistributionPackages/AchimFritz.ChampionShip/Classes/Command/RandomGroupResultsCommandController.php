@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -7,9 +8,9 @@ namespace AchimFritz\ChampionShip\Command;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Result;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Result;
+use AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
 
 /**
  * Point Command
@@ -18,7 +19,6 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
  */
 class RandomGroupResultsCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \Neos\Flow\Persistence\PersistenceManagerInterface
@@ -30,7 +30,7 @@ class RandomGroupResultsCommandController extends \Neos\Flow\Cli\CommandControll
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
      */
     protected $cupRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupMatchRepository
@@ -65,7 +65,7 @@ class RandomGroupResultsCommandController extends \Neos\Flow\Cli\CommandControll
             return 1;
         }
         $matches = $this->matchRepository->findByCup($cup);
-        foreach($matches as $match) {
+        foreach ($matches as $match) {
             $res = rand(0, count($this->results) - 1);
             $result = new Result($this->results[$res][0], $this->results[$res][1]);
             $match->setResult($result);
@@ -75,5 +75,4 @@ class RandomGroupResultsCommandController extends \Neos\Flow\Cli\CommandControll
         }
         return 0;
     }
-
 }

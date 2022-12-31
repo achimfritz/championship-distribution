@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -8,8 +9,8 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
 
 use Neos\Flow\Annotations as Flow;
 
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Round;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Round;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
 
 /**
  * GroupRound controller for the AchimFritz.ChampionShip package
@@ -18,25 +19,24 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class RoundController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\RoundRepository
      */
     protected $roundRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
      */
     protected $groupRoundRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\KoRoundRepository
      */
     protected $koRoundRepository;
-    
+
     /**
      * @var string
      */
@@ -52,7 +52,7 @@ class RoundController extends AbstractActionController
         if ($this->cup instanceof Cup) {
             $round = $this->roundRepository->findOneByCup($this->cup);
             if ($round instanceof Round) {
-                $this->forward('show', null, null, array('round' => $round, 'cup' => $round->getCup()));
+                $this->forward('show', null, null, ['round' => $round, 'cup' => $round->getCup()]);
             } else {
                 $this->addErrorMessage('no rounds found');
             }

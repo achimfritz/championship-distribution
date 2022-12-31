@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Tip\Controller;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Tip\Domain\Model\TipCup;
+use AchimFritz\ChampionShip\Tip\Domain\Model\TipCup;
 
 /**
  * Standard controller for the AchimFritz.ChampionShip package
@@ -16,7 +17,6 @@ use \AchimFritz\ChampionShip\Tip\Domain\Model\TipCup;
  */
 class TipCupController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamRepository
@@ -62,7 +62,7 @@ class TipCupController extends AbstractActionController
     {
         parent::initializeView($view);
         $tipCups = $this->tipCupRepository->findAll();
-        $cupsWithoutTips = array();
+        $cupsWithoutTips = [];
         foreach ($this->cups as $cup) {
             $tipCupExists = false;
             foreach ($tipCups as $tipCup) {

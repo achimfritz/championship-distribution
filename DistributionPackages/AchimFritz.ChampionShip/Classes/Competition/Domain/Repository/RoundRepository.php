@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -8,7 +9,7 @@ namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 use Neos\Flow\Annotations as Flow;
 use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
-use \Neos\Flow\Persistence\QueryInterface;
+use Neos\Flow\Persistence\QueryInterface;
 
 /**
  * A repository for KoRounds
@@ -17,7 +18,6 @@ use \Neos\Flow\Persistence\QueryInterface;
  */
 class RoundRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * __construct
      *
@@ -26,10 +26,10 @@ class RoundRepository extends \Neos\Flow\Persistence\Repository
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('generalMatches.startDate' => QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['generalMatches.startDate' => QueryInterface::ORDER_ASCENDING]);
     }
 
-    
+
     /**
      * findOneByNameAndCup
      *

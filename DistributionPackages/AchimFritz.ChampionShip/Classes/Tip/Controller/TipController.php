@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Tip\Controller;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
+use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
 
 /**
  * Standard controller for the AchimFritz.ChampionShip package
@@ -16,7 +17,6 @@ use \AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
  */
 class TipController extends AbstractActionController
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      * @Flow\Inject
@@ -68,7 +68,7 @@ class TipController extends AbstractActionController
     public function updateAction(Tip $tip)
     {
         $this->updateTip($tip);
-        $this->redirect('index', null, null, array('tip' => $tip));
+        $this->redirect('index', null, null, ['tip' => $tip]);
     }
 
     /**

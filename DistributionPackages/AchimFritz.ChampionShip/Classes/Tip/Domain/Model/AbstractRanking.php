@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Model;
 
 /*                                                                        *
@@ -14,7 +15,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 abstract class AbstractRanking
 {
-    
     /**
      * @var \AchimFritz\ChampionShip\User\Domain\Model\User
      * @Flow\Validate(type="NotEmpty")
@@ -37,7 +37,7 @@ abstract class AbstractRanking
      * @var integer
      */
     protected $countOfTips = 0;
-    
+
     /**
      * @return \AchimFritz\ChampionShip\User\Domain\Model\User
      */

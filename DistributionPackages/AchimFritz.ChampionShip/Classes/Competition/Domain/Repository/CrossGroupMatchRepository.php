@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
  */
 class CrossGroupMatchRepository extends KoMatchRepository
 {
-
     /**
      * findOneInGroupRoundWithRank
      *

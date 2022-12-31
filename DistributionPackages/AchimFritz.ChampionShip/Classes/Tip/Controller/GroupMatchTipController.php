@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class GroupMatchTipController extends AbstractActionController
 {
-        
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupMatchRepository
@@ -27,7 +27,7 @@ class GroupMatchTipController extends AbstractActionController
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      */
     protected $tipRepository;
-    
+
     /**
      * listAction
      *

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Generic\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\Rest\Controller\RestController;
  */
 class AbstractActionController extends RestController
 {
-
     /**
      * @var \Neos\Flow\I18n\Translator
      * @Flow\Inject
@@ -27,7 +27,7 @@ class AbstractActionController extends RestController
     /**
      * @var array
      */
-    protected $viewFormatToObjectNameMap = array('json' => 'AchimFritz\\ChampionShip\\Mvc\\View\\JsonView');
+    protected $viewFormatToObjectNameMap = ['json' => 'AchimFritz\\ChampionShip\\Mvc\\View\\JsonView'];
 
     /**
      * @return void
@@ -53,7 +53,7 @@ class AbstractActionController extends RestController
      */
     protected function initializeView(\Neos\Flow\Mvc\View\ViewInterface $view)
     {
-        $view->assign('controllers', array('Team', 'User', 'Cup', 'Standard'));
+        $view->assign('controllers', ['Team', 'User', 'Cup', 'Standard']);
         $view->assign('title', $this->request->getControllerName() . '.' . $this->request->getControllerActionName());
     }
 
@@ -101,14 +101,14 @@ class AbstractActionController extends RestController
 
     protected function handleException(\Exception $e): void
     {
-        $this->addFlashMessage($e->getMessage(), get_class($e), Message::SEVERITY_ERROR, array(), $e->getCode());
+        $this->addFlashMessage($e->getMessage(), get_class($e), Message::SEVERITY_ERROR, [], $e->getCode());
     }
 
     public function addFlashMessage($messageBody, $messageTitle = '', $severity = Message::SEVERITY_OK, array $messageArguments = [], $messageCode = null)
     {
         // try to translate message
         $id = 'flashMessage.' . str_replace(' ', '.', $messageBody);
-        $msg = $this->translator->translateById($id, array(), null, null, 'Main', 'AchimFritz.ChampionShip');
+        $msg = $this->translator->translateById($id, [], null, null, 'Main', 'AchimFritz.ChampionShip');
         if ($msg === null) {
             parent::addFlashMessage($messageBody, $messageTitle, $severity, $messageArguments, $messageCode);
         } else {

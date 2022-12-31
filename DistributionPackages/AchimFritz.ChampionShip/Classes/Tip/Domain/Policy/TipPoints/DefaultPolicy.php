@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Policy\TipPoints;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\Result;
  */
 class DefaultPolicy
 {
-
     /**
      * @var integer
      */

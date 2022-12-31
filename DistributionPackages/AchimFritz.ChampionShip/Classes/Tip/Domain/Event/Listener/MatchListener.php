@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Event\Listener;
 
 use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
@@ -12,7 +13,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\Result;
  */
 class MatchListener
 {
-
     /**
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
      * @Flow\Inject
@@ -54,7 +54,7 @@ class MatchListener
             $tipCup = $this->tipCupRepository->findOneByCup($match->getCup());
             if ($tipCup instanceof TipCup) {
                 $name = $tipCup->getTipPointsPolicy();
-                $tipPointsPolicy = new $name;
+                $tipPointsPolicy = new $name();
                 $tips = $this->tipRepository->findByGeneralMatch($match);
                 foreach ($tips as $tip) {
                     $points = $tipPointsPolicy->getPointsForTip($tip);

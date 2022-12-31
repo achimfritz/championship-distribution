@@ -38,5 +38,4 @@ class IfIsTeamsOfTwoMatchesMatchViewHelper extends \Neos\FluidAdaptor\Core\ViewH
     {
         return $arguments['match'] instanceof TeamsOfTwoMatchesMatch;
     }
-
 }

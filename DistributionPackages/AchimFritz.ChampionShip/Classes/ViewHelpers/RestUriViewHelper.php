@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\ViewHelpers;
 
 /*                                                                        *
@@ -24,8 +25,6 @@ use AchimFritz\ChampionShip\Chat\Domain\Model\ChatEntry;
  */
 class RestUriViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
-
-
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()
@@ -84,7 +83,7 @@ class RestUriViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewH
         }
 
         $action = 'index';
-        $arguments = array($resource => $object);
+        $arguments = [$resource => $object];
         if ($this->controllerContext->getRequest()->hasArgument('cup')) {
             $arguments['cup'] = $this->controllerContext->getRequest()->getArgument('cup');
         }

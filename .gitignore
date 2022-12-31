@@ -13,3 +13,4 @@
 .idea
 Readme.rst
 Upgrading.rst
+/.php-cs-fixer.cache

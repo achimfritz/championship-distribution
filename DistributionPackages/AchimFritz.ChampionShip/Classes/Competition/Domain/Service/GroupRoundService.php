@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Service;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class GroupRoundService
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
@@ -140,7 +140,7 @@ class GroupRoundService
      */
     protected function buildRoundsString($groupTableRows)
     {
-        $rounds = array();
+        $rounds = [];
         foreach ($groupTableRows as $groupTableRow) {
             $rounds[] = $groupTableRow->getGroupRound()->getName();
         }
@@ -156,7 +156,7 @@ class GroupRoundService
     protected function buildGroupTableRows(Cup $cup)
     {
         $groupRounds = $this->groupRoundRepository->findByCup($cup);
-        $groupTableRows = array();
+        $groupTableRows = [];
         foreach ($groupRounds as $groupRound) {
             if ($groupRound->getRoundIsFinished() === false) {
                 throw new Exception('groupRound not finished ' . $groupRound->getName(), 1464109831);

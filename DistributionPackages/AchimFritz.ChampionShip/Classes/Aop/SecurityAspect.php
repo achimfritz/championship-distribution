@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Aop;
 
 use Neos\Flow\Annotations as Flow;
@@ -12,7 +13,6 @@ use Neos\Flow\Aop\JoinPointInterface;
  */
 class SecurityAspect
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Security\TipSecurity

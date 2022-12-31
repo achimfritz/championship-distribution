@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Model;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Security\Account;
  */
 class Password
 {
-
     /**
      * @var string
      * @Flow\Validate(type="NotEmpty")

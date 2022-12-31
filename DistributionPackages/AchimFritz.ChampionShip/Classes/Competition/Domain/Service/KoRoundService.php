@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Service;
 
 /*                                                                        *
@@ -15,13 +16,12 @@ use Neos\Flow\Annotations as Flow;
  */
 class KoRoundService
 {
-    
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Factory\KoRoundFactory
      */
     protected $koRoundFactory;
-        
+
     /**
      * createKoRounds
      *

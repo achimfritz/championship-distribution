@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable;
 
 /*                                                                        *
@@ -38,10 +39,10 @@ class DefaultPolicy
     public function updateTable(array $rows)
     {
         $this->addMessage('updateTable with ' . count($rows) . ' teams');
-        $points = array();
-        $goalsDiff = array();
-        $goalsPlus = array();
-        $names = array();
+        $points = [];
+        $goalsDiff = [];
+        $goalsPlus = [];
+        $names = [];
         foreach ($rows as $name => $row) {
             $points[] = $row->getPoints();
             $goalsDiff[] = $row->getGoalsDiff();

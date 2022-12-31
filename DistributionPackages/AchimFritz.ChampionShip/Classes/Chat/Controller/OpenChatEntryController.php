@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Chat\Controller;
 
 /*                                                                        *
@@ -11,7 +12,6 @@ use AchimFritz\ChampionShip\Chat\Domain\Model\OpenChatEntry;
 
 class OpenChatEntryController extends AbstractChatEntryController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Chat\Domain\Repository\OpenChatEntryRepository

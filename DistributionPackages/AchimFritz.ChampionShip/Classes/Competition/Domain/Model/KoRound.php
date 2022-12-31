@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class KoRound extends Round
 {
-
     /**
      * @var \Doctrine\Common\Collections\Collection<\AchimFritz\ChampionShip\Competition\Domain\Model\ChildKoRound>
      * @ORM\OneToMany(mappedBy="parentRound", cascade={"remove"})

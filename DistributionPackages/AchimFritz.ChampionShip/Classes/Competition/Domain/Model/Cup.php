@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -16,16 +17,16 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Cup
 {
-    const GROUPTABLE_DEFAULT_POLICY = '\AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\DefaultPolicy';
-    const GROUPTABLE_FIFA_POINT_EQUALITY_POLICY = '\AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\FifaPointEqualityPolicy';
-    const GROUPTABLE_UEFA_POINT_EQUALITY_POLICY = '\AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\UefaPointEqualityPolicy';
+    public const GROUPTABLE_DEFAULT_POLICY = '\AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\DefaultPolicy';
+    public const GROUPTABLE_FIFA_POINT_EQUALITY_POLICY = '\AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\FifaPointEqualityPolicy';
+    public const GROUPTABLE_UEFA_POINT_EQUALITY_POLICY = '\AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\UefaPointEqualityPolicy';
 
     /**
      * @var string
      * @Flow\Validate(type="NotEmpty")
      */
     protected $groupTablePolicy = self::GROUPTABLE_DEFAULT_POLICY;
-    
+
     /**
      * @var string
      * @Flow\Identity
@@ -50,7 +51,7 @@ class Cup
      * @Flow\Validate(type="NotEmpty")
      */
     protected $startDate;
-   
+
     /**
      * @return void
      */
@@ -75,7 +76,7 @@ class Cup
     {
         return $this->groupTablePolicy;
     }
-    
+
     /**
      * @return string The Team's name
      */

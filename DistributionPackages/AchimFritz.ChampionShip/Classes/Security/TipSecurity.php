@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Security;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
  */
 class TipSecurity
 {
-
     /**
      * @var \Neos\Flow\Security\Context
      * @Flow\Inject

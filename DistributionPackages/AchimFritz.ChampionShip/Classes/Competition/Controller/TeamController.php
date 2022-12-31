@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\Team;
  */
 class TeamController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamRepository
@@ -73,7 +73,7 @@ class TeamController extends AbstractActionController
             $this->addErrorMessage('cannot create team');
             $this->handleException($e);
         }
-        $this->redirect('index', 'Team', null, array('team' => $team));
+        $this->redirect('index', 'Team', null, ['team' => $team]);
     }
 
 
@@ -93,7 +93,7 @@ class TeamController extends AbstractActionController
             $this->addErrorMessage('cannot update team');
             $this->handleException($e);
         }
-        $this->redirect('index', 'Team', null, array('team' => $team));
+        $this->redirect('index', 'Team', null, ['team' => $team]);
     }
 
     /**

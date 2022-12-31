@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class UserTipController extends AbstractTipGroupController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository

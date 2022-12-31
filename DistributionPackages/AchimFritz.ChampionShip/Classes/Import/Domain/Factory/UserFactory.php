@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -17,11 +18,10 @@ use AchimFritz\ChampionShip\Domain\Model\TipGroup;
  */
 class UserFactory
 {
-
-   /**
-    * @Flow\Inject
-    * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
-    */
+    /**
+     * @Flow\Inject
+     * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
+     */
     protected $userRepository;
 
     /**

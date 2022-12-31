@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -18,7 +19,6 @@ use AchimFritz\ChampionShip\Tip\Domain\Model\CupRanking;
  */
 class RankingCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
@@ -103,8 +103,8 @@ class RankingCommandController extends \Neos\Flow\Cli\CommandController
         $cups = $this->cupRepository->findAll();
         $users = $this->userRepository->findAll();
         foreach ($cups as $cup) {
-            $rankings = array();
-            $points = array();
+            $rankings = [];
+            $points = [];
             $matches = $this->matchRepository->findByCup($cup);
             foreach ($users as $user) {
                 $ranking = new CupRanking();
@@ -137,8 +137,8 @@ class RankingCommandController extends \Neos\Flow\Cli\CommandController
             }
         }
         $this->persistenceManager->persistAll();
-        $rankings = array();
-        $points = array();
+        $rankings = [];
+        $points = [];
         foreach ($users as $user) {
             $ranking = new Ranking();
             $ranking->setUser($user);

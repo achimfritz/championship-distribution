@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\ContactRequest;
  */
 class ContactRequestController extends AbstractActionController
 {
-
     /**
      * @var string
      */
@@ -84,7 +84,7 @@ class ContactRequestController extends AbstractActionController
             $this->addErrorMessage('cannot update contactRequest');
             $this->handleException($e);
         }
-        $this->redirect('index', null, null, array('contactRequest' => $contactRequest));
+        $this->redirect('index', null, null, ['contactRequest' => $contactRequest]);
     }
 
     /**

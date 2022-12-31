@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable;
 
 /*                                                                        *
@@ -16,14 +17,13 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GroupTableRow;
  */
 class FifaPointEqualityPolicy extends AbstractPointEqualityPolicy
 {
-
-   /**
-    * rowsAreEquay
-    *
-    * @param GroupTableRow $rowOne
-    * @param GroupTableRow $rowTwo
-    * @return boolean
-    */
+    /**
+     * rowsAreEquay
+     *
+     * @param GroupTableRow $rowOne
+     * @param GroupTableRow $rowTwo
+     * @return boolean
+     */
     protected function rowsAreEqual(GroupTableRow $rowOne, GroupTableRow $rowTwo)
     {
         $this->addMessage('comparing ' . $rowOne->getTeam()->getName() . ' - ' . $rowTwo->getTeam()->getName());

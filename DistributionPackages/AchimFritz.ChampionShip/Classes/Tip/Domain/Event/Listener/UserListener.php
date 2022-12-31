@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Event\Listener;
 
 use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
@@ -11,7 +12,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GeneralMatch;
  */
 class UserListener
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      * @Flow\Inject

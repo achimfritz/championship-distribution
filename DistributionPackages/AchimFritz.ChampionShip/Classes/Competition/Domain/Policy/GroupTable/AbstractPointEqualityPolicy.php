@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable;
 
 /*                                                                        *
@@ -21,8 +22,6 @@ use Psr\Log\LogLevel;
  */
 abstract class AbstractPointEqualityPolicy
 {
-
-
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Policy\GroupTable\DefaultPolicy
      * @Flow\Inject
@@ -131,7 +130,7 @@ abstract class AbstractPointEqualityPolicy
             $round = new GroupRound();
             $groupTableRows = $round->getGroupTableRowsByResults($relevant);
             $groupTableRows = $this->defaultPolicy->updateTable($groupTableRows);
-            $arr = array();
+            $arr = [];
             foreach ($groupTableRows as $groupTableRow) {
                 $arr[$groupTableRow->getTeam()->getName()] = $groupTableRow;
             }
@@ -171,21 +170,21 @@ abstract class AbstractPointEqualityPolicy
                     if ($this->rowsAreEqual($next, $overNext)) {
                         $this->addMessage('case 1 point equality with 3 teams, i=' . $i);
                         $this->addMessage($row->getTeam()->getName() . ' - ' . $next->getTeam()->getName() . ' - ' . $overNext->getTeam()->getName());
-                        $this->pointEquality(array($row, $next, $overNext), $matches);
+                        $this->pointEquality([$row, $next, $overNext], $matches);
                         //finish
                         $i++;
                     } else {
                         $this->addMessage('case 2 point equality with 2 teams, i=' . $i);
-                        $this->pointEquality(array($row, $next), $matches);
+                        $this->pointEquality([$row, $next], $matches);
                     }
                 } else {
                     $this->addMessage('case 3 point equality with 2 teams, i=' . $i);
-                    $this->pointEquality(array($row, $next), $matches);
+                    $this->pointEquality([$row, $next], $matches);
                 }
             }
         }
         // assoc array
-        $new = array();
+        $new = [];
         foreach ($res as $row) {
             $name = $row->getTeam()->getName();
             $new[$name] = $row;

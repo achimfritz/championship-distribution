@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Event\Listener;
 
 use AchimFritz\ChampionShip\Competition\Domain\Model\Round;
@@ -9,7 +10,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class RoundListener
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipRepository
      * @Flow\Inject

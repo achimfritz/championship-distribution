@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch;
  */
 class TeamsOfTwoMatchesMatch extends KoMatch
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch
      * @ORM\ManyToOne(cascade={"detach"})

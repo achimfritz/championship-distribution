@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -7,9 +8,9 @@ namespace AchimFritz\ChampionShip\Command;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Result;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\KoMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Result;
+use AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
 
 /**
  * Point Command
@@ -18,7 +19,6 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
  */
 class TestCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \Neos\Flow\Persistence\PersistenceManagerInterface
@@ -30,13 +30,13 @@ class TestCommandController extends \Neos\Flow\Cli\CommandController
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
      */
     protected $cupRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\KoMatchRepository
      */
     protected $matchRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamsOfTwoMatchesMatchRepository

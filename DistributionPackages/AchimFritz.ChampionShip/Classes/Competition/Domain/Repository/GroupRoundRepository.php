@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \Neos\Flow\Persistence\QueryInterface;
+use Neos\Flow\Persistence\QueryInterface;
 
 /**
  * A repository for GroupRounds
@@ -16,7 +17,6 @@ use \Neos\Flow\Persistence\QueryInterface;
  */
 class GroupRoundRepository extends RoundRepository
 {
-    
     /**
      * __construct
      *
@@ -25,6 +25,6 @@ class GroupRoundRepository extends RoundRepository
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('name' => QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['name' => QueryInterface::ORDER_ASCENDING]);
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class CrossGroupWithThirdsMatchRepository extends CrossGroupMatchRepository
 {
-
     /**
      * @param Cup $cup
      * @param $roundName

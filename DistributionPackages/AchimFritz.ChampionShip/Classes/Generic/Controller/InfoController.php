@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Generic\Controller;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class InfoController extends AbstractActionController
 {
-
     /**
      * @return void
      */

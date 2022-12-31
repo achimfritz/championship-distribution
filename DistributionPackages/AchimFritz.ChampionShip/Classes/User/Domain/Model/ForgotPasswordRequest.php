@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Model;
 
 /*                                                                        *
@@ -14,7 +15,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ForgotPasswordRequest
 {
-
     /**
      * @var \DateTime|NULL
      */

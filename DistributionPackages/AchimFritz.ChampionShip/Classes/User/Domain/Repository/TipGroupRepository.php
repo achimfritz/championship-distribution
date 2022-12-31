@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Repository;
 
 /*                                                                        *
@@ -8,7 +9,7 @@ namespace AchimFritz\ChampionShip\User\Domain\Repository;
 
 use Neos\Flow\Annotations as Flow;
 use AchimFritz\ChampionShip\User\Domain\Model\User;
-use \Neos\Flow\Persistence\QueryInterface;
+use Neos\Flow\Persistence\QueryInterface;
 
 /**
  * A repository for TipGroups
@@ -17,7 +18,6 @@ use \Neos\Flow\Persistence\QueryInterface;
  */
 class TipGroupRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * findByUser
      *

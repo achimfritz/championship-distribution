@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -21,7 +22,6 @@ use AchimFritz\ChampionShip\Import\Domain\Model\Tip;
  */
 class TipFactory
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Import\Domain\Factory\UserFactory
      * @Flow\Inject

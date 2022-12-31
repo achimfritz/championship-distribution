@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CrossGroupWithThirdsMatch extends CrossGroupMatch
 {
-
     /**
      * @var \Doctrine\Common\Collections\Collection<\AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound>
      * @ORM\ManyToMany

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -8,8 +9,8 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
 
 use Neos\Flow\Annotations as Flow;
 
-use \AchimFritz\ChampionShip\Competition\Domain\Model\GeneralMatch;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Model\GeneralMatch;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
 
 /**
  * Match controller for the AchimFritz.ChampionShip package
@@ -18,7 +19,6 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class MatchController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GeneralMatchRepository
@@ -51,7 +51,7 @@ class MatchController extends AbstractActionController
     /**
      * @var array
      */
-    protected $viewFormatToObjectNameMap = array('json' => 'AchimFritz\\ChampionShip\\Mvc\\View\\MatchesJsonView');
+    protected $viewFormatToObjectNameMap = ['json' => 'AchimFritz\\ChampionShip\\Mvc\\View\\MatchesJsonView'];
 
     /**
      * listAction

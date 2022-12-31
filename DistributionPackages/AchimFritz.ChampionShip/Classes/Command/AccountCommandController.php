@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -19,7 +20,6 @@ use Neos\Flow\Security\AccountRepository;
  */
 class AccountCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @var \Neos\Flow\Security\AccountRepository
      * @Flow\Inject

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -15,14 +16,13 @@ use Neos\Flow\Annotations as Flow;
  */
 class CupRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * @return void
      */
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING]);
     }
 
     /**
@@ -31,7 +31,7 @@ class CupRepository extends \Neos\Flow\Persistence\Repository
     public function findOneRecent()
     {
         $query = $this->createQuery();
-        $query->setOrderings(array('startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_DESCENDING));
+        $query->setOrderings(['startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_DESCENDING]);
         return $query->execute()->getFirst();
     }
 }

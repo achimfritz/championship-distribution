@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Validator;
 
 use AchimFritz\ChampionShip\User\Domain\Model\RegistrationRequest;
@@ -14,7 +15,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\RegistrationRequest;
  */
 class RegistrationRequestValidator extends \Neos\Flow\Validation\Validator\GenericObjectValidator
 {
-
     /**
      * Checks if the concatenated person name has at least one character.
      *

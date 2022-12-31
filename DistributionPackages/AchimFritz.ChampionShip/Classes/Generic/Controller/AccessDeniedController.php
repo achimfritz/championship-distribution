@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Generic\Controller;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use Neos\Flow\Mvc\Controller\RestController;
  */
 class AccessDeniedController extends AbstractActionController
 {
-
     /**
      * Index action
      *

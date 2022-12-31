@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Repository;
 
 /*                                                                        *
@@ -14,8 +15,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class CupRankingRepository extends AbstractRankingRepository
 {
-
-
     /**
      * @param \Neos\Flow\Persistence\QueryResultInterface|array $users
      * @param Cup $cup
@@ -23,7 +22,7 @@ class CupRankingRepository extends AbstractRankingRepository
      */
     public function findByUsersAndCup($users, Cup $cup)
     {
-        $identifiers = array();
+        $identifiers = [];
         foreach ($users as $user) {
             $identifiers[] = $this->persistenceManager->getIdentifierByObject($user);
         }
@@ -32,8 +31,8 @@ class CupRankingRepository extends AbstractRankingRepository
             $query->logicalAnd(
                 $query->in('user', $identifiers),
                 $query->equals('cup', $cup)
-                )
             )
+        )
         ->execute();
     }
 }

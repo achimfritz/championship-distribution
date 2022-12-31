@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Domain\Repository;
 
 /*                                                                        *
@@ -14,6 +15,5 @@ use Neos\Flow\Persistence\Repository;
  */
 class ContactRequestRepository extends Repository
 {
-
     // add customized methods here
 }

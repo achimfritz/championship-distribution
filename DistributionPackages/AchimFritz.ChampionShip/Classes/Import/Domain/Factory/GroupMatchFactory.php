@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -20,7 +21,6 @@ use AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch;
  */
 class GroupMatchFactory
 {
-
     /**
      * @var \Neos\Flow\Persistence\PersistenceManagerInterface
      * @Flow\Inject

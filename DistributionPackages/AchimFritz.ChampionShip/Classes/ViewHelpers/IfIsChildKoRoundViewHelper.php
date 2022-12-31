@@ -20,7 +20,6 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 
 class IfIsChildKoRoundViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractConditionViewHelper
 {
-
     public function initializeArguments()
     {
         parent::initializeArguments();
@@ -39,5 +38,4 @@ class IfIsChildKoRoundViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\Abst
     {
         return $arguments['round'] instanceof ChildKoRound;
     }
-
 }

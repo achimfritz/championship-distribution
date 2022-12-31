@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -16,8 +17,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class KoRoundCreatorController extends \AchimFritz\ChampionShip\Generic\Controller\AbstractActionController
 {
-
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\KoRoundRepository
@@ -65,6 +64,6 @@ class KoRoundCreatorController extends \AchimFritz\ChampionShip\Generic\Controll
                 $this->handleException($e);
             }
         }
-        $this->redirect('index', 'KoRound', null, array('cup' => $cup));
+        $this->redirect('index', 'KoRound', null, ['cup' => $cup]);
     }
 }

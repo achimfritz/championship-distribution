@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\ViewHelpers;
 
 /*                                                                        *
@@ -22,8 +23,6 @@ use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
  */
 class TipPointsViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
-
-
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()

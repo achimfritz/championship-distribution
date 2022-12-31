@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -16,13 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GroupTableRow
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\Team
      * @ORM\ManyToOne
      */
     protected $team;
-    
+
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound
      * @ORM\ManyToOne
@@ -70,7 +70,7 @@ class GroupTableRow
      */
     protected $countOfMatchesLoosed = 0;
 
-    
+
     /**
      * setGroupRound
      *
@@ -128,7 +128,7 @@ class GroupTableRow
         $this->rank = $rank;
     }
 
-    
+
     /**
      * getGroupRound
      *

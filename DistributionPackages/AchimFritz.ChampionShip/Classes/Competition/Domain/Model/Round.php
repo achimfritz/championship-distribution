@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Round
 {
-
     /**
      * The name
      * @var string

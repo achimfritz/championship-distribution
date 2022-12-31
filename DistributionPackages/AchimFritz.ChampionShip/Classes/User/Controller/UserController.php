@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\User;
  */
 class UserController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\TipGroupRepository
@@ -84,7 +84,7 @@ class UserController extends AbstractActionController
             $this->handleException($e);
             $this->redirect('index');
         }
-        $this->redirect('index', null, null, array('user' => $newUser));
+        $this->redirect('index', null, null, ['user' => $newUser]);
     }
 
     /**
@@ -103,7 +103,7 @@ class UserController extends AbstractActionController
             $this->addErrorMessage('cannot update user');
             $this->handleException($e);
         }
-        $this->redirect('index', null, null, array('user' => $user));
+        $this->redirect('index', null, null, ['user' => $user]);
     }
 
     /**

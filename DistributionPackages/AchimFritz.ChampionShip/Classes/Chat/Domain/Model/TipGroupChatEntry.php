@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Chat\Domain\Model;
 
 /*                                                                        *
@@ -14,7 +15,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class TipGroupChatEntry extends ChatEntry
 {
-
     /**
      * @var \AchimFritz\ChampionShip\User\Domain\Model\TipGroup
      * @ORM\ManyToOne

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -8,7 +9,7 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
 
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
 
 /**
  * Action controller for the AchimFritz.ChampionShip package
@@ -17,7 +18,6 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class AbstractActionController extends \AchimFritz\ChampionShip\Generic\Controller\AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
@@ -73,10 +73,10 @@ class AbstractActionController extends \AchimFritz\ChampionShip\Generic\Controll
         $propertyMappingConfiguration
             ->forProperty('startDate')
             ->setTypeConverterOption(
-                    'Neos\Flow\Property\TypeConverter\DateTimeConverter',
-                    \Neos\Flow\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,
-                    'd.m.Y H:i'
-                    );
+                'Neos\Flow\Property\TypeConverter\DateTimeConverter',
+                \Neos\Flow\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,
+                'd.m.Y H:i'
+            );
     }
 
     /**
@@ -92,10 +92,10 @@ class AbstractActionController extends \AchimFritz\ChampionShip\Generic\Controll
         $propertyMappingConfiguration
             ->forProperty('startDate')
             ->setTypeConverterOption(
-                    'Neos\Flow\Property\TypeConverter\DateTimeConverter',
-                    \Neos\Flow\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,
-                    'd.m.Y H:i'
-                    );
+                'Neos\Flow\Property\TypeConverter\DateTimeConverter',
+                \Neos\Flow\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,
+                'd.m.Y H:i'
+            );
     }
 
     /**
@@ -105,7 +105,7 @@ class AbstractActionController extends \AchimFritz\ChampionShip\Generic\Controll
      */
     protected function initializeView(\Neos\Flow\Mvc\View\ViewInterface $view)
     {
-        $view->assign('controllers', array('Team', 'User', 'Cup', 'Standard'));
+        $view->assign('controllers', ['Team', 'User', 'Cup', 'Standard']);
         $view->assign('title', $this->request->getControllerName() . '.' . $this->request->getControllerActionName());
         $this->view->assign('cup', $this->cup);
         $this->view->assign('recentCup', $this->cup);

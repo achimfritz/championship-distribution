@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -20,7 +21,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class LoginController extends \Neos\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\UserRepository
@@ -55,11 +55,11 @@ class LoginController extends \Neos\Flow\Security\Authentication\Controller\Abst
      */
     public function onAuthenticationSuccess(\Neos\Flow\Mvc\ActionRequest $originalRequest = null)
     {
-        $message = $this->translator->translateById('loginSuccess', array(), null, null, 'Main', 'AchimFritz.ChampionShip');
+        $message = $this->translator->translateById('loginSuccess', [], null, null, 'Main', 'AchimFritz.ChampionShip');
         $this->addFlashMessage($message, '', \Neos\Error\Messages\Message::SEVERITY_OK);
         $this->redirect('index', 'Standard', 'AchimFritz.ChampionShip\\Generic');
     }
-    
+
     /**
      * Logs all active tokens out. Override this, if you want to
      * have some custom action here. You can always call the parent
@@ -70,11 +70,11 @@ class LoginController extends \Neos\Flow\Security\Authentication\Controller\Abst
     public function logoutAction()
     {
         parent::logoutAction();
-        $message = $this->translator->translateById('logoutSuccess', array(), null, null, 'Main', 'AchimFritz.ChampionShip');
+        $message = $this->translator->translateById('logoutSuccess', [], null, null, 'Main', 'AchimFritz.ChampionShip');
         $this->addFlashMessage($message, '', \Neos\Error\Messages\Message::SEVERITY_OK);
         $this->redirect('index', 'Standard', 'AchimFritz.ChampionShip\\Generic');
     }
-    
+
     /**
      * Is called if authentication failed.
      *
@@ -87,7 +87,7 @@ class LoginController extends \Neos\Flow\Security\Authentication\Controller\Abst
      */
     protected function onAuthenticationFailure(\Neos\Flow\Security\Exception\AuthenticationRequiredException $exception = null)
     {
-        $message = $this->translator->translateById('loginFailed', array(), null, null, 'Main', 'AchimFritz.ChampionShip');
+        $message = $this->translator->translateById('loginFailed', [], null, null, 'Main', 'AchimFritz.ChampionShip');
         $this->addFlashMessage($message, '', \Neos\Error\Messages\Message::SEVERITY_ERROR);
     }
 

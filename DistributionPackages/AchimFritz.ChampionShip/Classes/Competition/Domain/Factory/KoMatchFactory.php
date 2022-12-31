@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Factory;
 
 /*                                                                        *
@@ -19,7 +20,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GroupRound;
  */
 class KoMatchFactory
 {
-
     /**
      * createFromGroupRounds
      *

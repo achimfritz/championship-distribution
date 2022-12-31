@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\User\Controller;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\RegistrationRequest;
  */
 class UserCreatorController extends AbstractActionController
 {
-
     /**
      * @var string
      */
@@ -71,6 +71,6 @@ class UserCreatorController extends AbstractActionController
             $this->handleException($e);
             $this->redirect('index');
         }
-        $this->redirect('index', 'User', null, array('user' => $user));
+        $this->redirect('index', 'User', null, ['user' => $user]);
     }
 }

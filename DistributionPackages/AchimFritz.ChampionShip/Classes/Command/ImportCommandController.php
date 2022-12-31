@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -15,7 +16,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class ImportCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @Flow\Inject
      * @var \Neos\Flow\Property\PropertyMapper
@@ -129,12 +129,14 @@ class ImportCommandController extends \Neos\Flow\Cli\CommandController
         foreach ($lines as $line) {
             $json = json_decode($line, true);
             if ($json !== null) {
-                $match = $this->propertyMapper->convert($json['match'],
-                    'AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch');
+                $match = $this->propertyMapper->convert(
+                    $json['match'],
+                    'AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch'
+                );
                 try {
-                    $cup = $this->cupFactory->createFromMatch($match, array());
+                    $cup = $this->cupFactory->createFromMatch($match, []);
 
-                    $koRound = $this->koRoundFactory->createFromMatch($match, array(), $cup);
+                    $koRound = $this->koRoundFactory->createFromMatch($match, [], $cup);
                     $koMatch = $this->koMatchFactory->createFromKoMatch($match, $cup, $koRound);
                     $this->persistenceManager->persistAll();
                     $this->outputLine('OK ' . $match->getHomeTeam() . ' - ' . $match->getGuestTeam());
@@ -166,8 +168,10 @@ class ImportCommandController extends \Neos\Flow\Cli\CommandController
         foreach ($lines as $line) {
             $json = json_decode($line, true);
             if ($json !== null) {
-                $match = $this->propertyMapper->convert($json['match'],
-                    'AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch');
+                $match = $this->propertyMapper->convert(
+                    $json['match'],
+                    'AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch'
+                );
                 try {
                     $teams = $this->teamFactory->createFromMatch($match);
                     $cup = $this->cupFactory->createFromMatch($match, $teams);

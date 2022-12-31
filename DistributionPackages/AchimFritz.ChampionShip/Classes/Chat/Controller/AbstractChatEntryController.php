@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Chat\Controller;
 
 /*                                                                        *
@@ -12,7 +13,6 @@ use AchimFritz\ChampionShip\Tip\Controller\AbstractTipGroupController;
 
 class AbstractChatEntryController extends AbstractTipGroupController
 {
-
     /**
      * @var string
      */

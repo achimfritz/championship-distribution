@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Event\Listener;
 
 use AchimFritz\ChampionShip\Tip\Domain\Model\Tip;
@@ -11,7 +12,6 @@ use AchimFritz\ChampionShip\Domain\Model\Result;
  */
 class TipListener
 {
-
     /**
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\TipCupRepository
      * @Flow\Inject
@@ -28,7 +28,7 @@ class TipListener
             $tipCup = $this->tipCupRepository->findOneByCup($tip->getMatch()->getCup());
             if ($tipCup instanceof TipCup) {
                 $name = $tipCup->getTipPointsPolicy();
-                $tipPointsPolicy = new $name;
+                $tipPointsPolicy = new $name();
                 $points = $tipPointsPolicy->getPointsForTip($tip);
                 $tip->setPoints($points);
             }

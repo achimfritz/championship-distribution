@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\ViewHelpers;
 
 /*                                                                        *
@@ -21,8 +22,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class EnvironmentViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper
 {
-
-    
     /**
      * NOTE: This property has been introduced via code migration to ensure backwards-compatibility.
      * @see AbstractViewHelper::isOutputEscapingEnabled()

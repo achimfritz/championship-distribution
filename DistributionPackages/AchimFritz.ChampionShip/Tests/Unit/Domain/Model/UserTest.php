@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tests\Unit\Domain\Model;
 
 /*                                                                        *
@@ -9,17 +10,17 @@ namespace AchimFritz\ChampionShip\Tests\Unit\Domain\Model;
 /**
  * Testcase for User
  */
-class UserTest extends \Neos\Flow\Tests\UnitTestCase {
+class UserTest extends \Neos\Flow\Tests\UnitTestCase
+{
+    /**
+     * @test
+     */
+    public function makeSureThatSomethingHolds()
+    {
+        $this->markTestIncomplete('Automatically generated test case; you need to adjust this!');
 
-	/**
-	 * @test
-	 */
-	public function makeSureThatSomethingHolds() {
-		$this->markTestIncomplete('Automatically generated test case; you need to adjust this!');
-
-		$expected = 'Foo';
-		$actual = 'Foo'; // This should be the result of some function call
-		$this->assertSame($expected, $actual);
-	}
+        $expected = 'Foo';
+        $actual = 'Foo'; // This should be the result of some function call
+        $this->assertSame($expected, $actual);
+    }
 }
-?>

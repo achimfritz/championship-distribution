@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\TipGroup;
  */
 class UserCommandController extends \Neos\Flow\Cli\CommandController
 {
-
     /**
      * @var \AchimFritz\ChampionShip\User\Domain\Factory\UserFactory
      * @Flow\Inject

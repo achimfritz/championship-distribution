@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Controller;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Competition\Controller;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
+use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
 
 /**
  * Cup controller for the AchimFritz.ChampionShip package
@@ -16,20 +17,18 @@ use \AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
  */
 class CupController extends AbstractActionController
 {
-
-    
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\GroupRoundRepository
      */
     protected $groupRoundRepository;
-    
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\KoRoundRepository
      */
     protected $koRoundRepository;
-        
+
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamRepository
@@ -40,7 +39,7 @@ class CupController extends AbstractActionController
      * @var string
      */
     protected $resourceArgumentName = 'cup';
-    
+
     /**
      * listAction
      *
@@ -83,7 +82,7 @@ class CupController extends AbstractActionController
             $this->addErrorMessage('cannot create cup');
             $this->handleException($e);
         }
-        $this->redirect('index', 'Cup', null, array('cup' => $cup));
+        $this->redirect('index', 'Cup', null, ['cup' => $cup]);
     }
 
     /**
@@ -102,7 +101,7 @@ class CupController extends AbstractActionController
             $this->addErrorMessage('cannot update cup');
             $this->handleException($e);
         }
-        $this->redirect('index', 'Cup', null, array('cup' => $cup));
+        $this->redirect('index', 'Cup', null, ['cup' => $cup]);
     }
 
     /**

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Repository;
 
 /*                                                                        *
@@ -11,8 +12,8 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\GeneralMatch;
 use AchimFritz\ChampionShip\User\Domain\Model\User;
 use AchimFritz\ChampionShip\Competition\Domain\Model\Cup;
 use AchimFritz\ChampionShip\Competition\Domain\Model\Round;
-use \Neos\Flow\Persistence\Repository;
-use \Neos\Flow\Persistence\QueryInterface;
+use Neos\Flow\Persistence\Repository;
+use Neos\Flow\Persistence\QueryInterface;
 
 /**
  * A repository for TipGroups
@@ -21,14 +22,13 @@ use \Neos\Flow\Persistence\QueryInterface;
  */
 class TipRepository extends Repository
 {
-
     /**
      * @return void
      */
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('generalMatch.startDate' => QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['generalMatch.startDate' => QueryInterface::ORDER_ASCENDING]);
     }
 
     /**
@@ -58,7 +58,7 @@ class TipRepository extends Repository
     {
         $query = $this->createQuery();
         return $query->matching(
-         $query->logicalAnd(
+            $query->logicalAnd(
                 $query->equals('generalMatch.cup', $cup),
                 $query->equals('user', $user)
             )
@@ -86,7 +86,7 @@ class TipRepository extends Repository
      */
     public function findByUserInMatches(User $user, $matches)
     {
-        $identifiers = array();
+        $identifiers = [];
         foreach ($matches as $match) {
             $identifiers[] = $this->persistenceManager->getIdentifierByObject($match);
         }
@@ -123,7 +123,7 @@ class TipRepository extends Repository
      */
     public function findByUsersAndMatch(\Neos\Flow\Persistence\QueryResultInterface $users, GeneralMatch $match)
     {
-        $identifiers = array();
+        $identifiers = [];
         foreach ($users as $user) {
             $identifiers[] = $this->persistenceManager->getIdentifierByObject($user);
         }
@@ -146,7 +146,7 @@ class TipRepository extends Repository
     {
         $query = $this->createQuery();
         return $query->matching(
-         $query->logicalAnd(
+            $query->logicalAnd(
                 $query->equals('generalMatch.round', $round),
                 $query->equals('user', $user)
             )

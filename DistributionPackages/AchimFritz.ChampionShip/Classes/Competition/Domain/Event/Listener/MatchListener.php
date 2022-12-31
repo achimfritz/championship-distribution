@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Event\Listener;
 
 use AchimFritz\ChampionShip\Competition\Domain\Model\GeneralMatch;
@@ -13,7 +14,6 @@ use AchimFritz\ChampionShip\Competition\Domain\Model\TeamsOfTwoMatchesMatch;
  */
 class MatchListener
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamsOfTwoMatchesMatchRepository

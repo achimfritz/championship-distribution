@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -11,7 +12,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\User;
 
 class AbstractTipGroupController extends AbstractActionController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\User\Domain\Repository\TipGroupRepository

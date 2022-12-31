@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Model;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class GroupRound extends Round
 {
-
     /**
      * The group table
      * @var \Doctrine\Common\Collections\Collection<\AchimFritz\ChampionShip\Competition\Domain\Model\GroupTableRow>
@@ -48,7 +48,7 @@ class GroupRound extends Round
         }
         return true;
     }
-    
+
     /**
      * @param integer $rank
      * @return \AchimFritz\ChampionShip\Competition\Domain\Model\Team|NULL
@@ -74,8 +74,8 @@ class GroupRound extends Round
         }
         return null;
     }
-    
-    
+
+
     /**
      * @return \AchimFritz\ChampionShip\Competition\Domain\Model\Team
      */
@@ -83,7 +83,7 @@ class GroupRound extends Round
     {
         return $this->getTeamByRank(1);
     }
-    
+
     /**
      * @return \AchimFritz\ChampionShip\Competition\Domain\Model\Team
      */
@@ -99,7 +99,7 @@ class GroupRound extends Round
     {
         return $this->getTeamByRank(3);
     }
-    
+
     /**
      * @return \Doctrine\Common\Collections\Collection<\AchimFritz\ChampionShip\Competition\Domain\Model\GroupTableRow>
      */
@@ -124,7 +124,7 @@ class GroupRound extends Round
     {
         $this->groupTableRows = $groupTableRows;
     }
-    
+
     /**
      * @return void
      */
@@ -200,7 +200,7 @@ class GroupRound extends Round
             $groupTableRows = new ArrayCollection();
             $cup = $this->getCup();
             $name = $cup->getGroupTablePolicy();
-            $rankingPolicy = new $name;
+            $rankingPolicy = new $name();
             $rows = $rankingPolicy->updateTable($rows, $matches);
             foreach ($rows as $row) {
                 $groupTableRows->add($row);
@@ -244,10 +244,10 @@ class GroupRound extends Round
      */
     protected function getTeamPairs(\Doctrine\Common\Collections\Collection $teams)
     {
-        $pairs = array();
+        $pairs = [];
         for ($k = 0; $k < sizeof($teams); $k++) {
             for ($i = $k+1; $i < sizeof($teams); $i++) {
-                $pair = array('teamOne' => $teams[$k], 'teamTwo' => $teams[$i]);
+                $pair = ['teamOne' => $teams[$k], 'teamTwo' => $teams[$i]];
                 $pairs[] = $pair;
             }
         }

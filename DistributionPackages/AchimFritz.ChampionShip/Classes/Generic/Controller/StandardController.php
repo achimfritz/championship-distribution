@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Generic\Controller;
 
 /*                                                                        *
@@ -15,8 +16,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class StandardController extends AbstractActionController
 {
-
-
     /**
      * @return void
      */

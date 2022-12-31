@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Model;
 
 /*                                                                        *
@@ -16,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class TipCup
 {
-    const TIP_POINTS_TWO_ONE_POLICY = '\AchimFritz\ChampionShip\Tip\Domain\Policy\TipPoints\TwoOnePolicy';
-    const TIP_POINTS_THREE_ONE_POLICY = '\AchimFritz\ChampionShip\Tip\Domain\Policy\TipPoints\ThreeOnePolicy';
+    public const TIP_POINTS_TWO_ONE_POLICY = '\AchimFritz\ChampionShip\Tip\Domain\Policy\TipPoints\TwoOnePolicy';
+    public const TIP_POINTS_THREE_ONE_POLICY = '\AchimFritz\ChampionShip\Tip\Domain\Policy\TipPoints\ThreeOnePolicy';
 
     /**
      * @var \AchimFritz\ChampionShip\Competition\Domain\Model\Cup

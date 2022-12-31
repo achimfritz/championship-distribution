@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Domain\Repository;
 
 /*                                                                        *
@@ -7,7 +8,7 @@ namespace AchimFritz\ChampionShip\Tip\Domain\Repository;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use \Neos\Flow\Persistence\Repository;
+use Neos\Flow\Persistence\Repository;
 
 /**
  * A repository for TipGroups
@@ -16,14 +17,13 @@ use \Neos\Flow\Persistence\Repository;
  */
 class TipCupRepository extends Repository
 {
-
     /**
      * @return void
      */
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('cup.startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['cup.startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_ASCENDING]);
     }
 
     /**
@@ -32,7 +32,7 @@ class TipCupRepository extends Repository
     public function findOneRecent()
     {
         $query = $this->createQuery();
-        $query->setOrderings(array('cup.startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_DESCENDING));
+        $query->setOrderings(['cup.startDate' => \Neos\Flow\Persistence\QueryInterface::ORDER_DESCENDING]);
         return $query->execute()->getFirst();
     }
 }

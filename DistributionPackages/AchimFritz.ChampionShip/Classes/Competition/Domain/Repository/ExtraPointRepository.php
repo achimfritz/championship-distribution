@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use Neos\Flow\Persistence\Repository;
  */
 class ExtraPointRepository extends Repository
 {
-
     /**
      * @param Cup $cup
      * @param Team $team

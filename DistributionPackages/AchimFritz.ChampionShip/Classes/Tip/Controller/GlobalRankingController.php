@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Tip\Controller;
 
 /*                                                                        *
@@ -16,7 +17,6 @@ use AchimFritz\ChampionShip\User\Domain\Model\TipGroup;
  */
 class GlobalRankingController extends AbstractTipGroupController
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Tip\Domain\Repository\RankingRepository

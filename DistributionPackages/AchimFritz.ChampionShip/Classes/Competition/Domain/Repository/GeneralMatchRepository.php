@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Competition\Domain\Repository;
 
 /*                                                                        *
@@ -19,7 +20,6 @@ use Neos\Flow\Persistence\QueryInterface;
  */
 class GeneralMatchRepository extends \Neos\Flow\Persistence\Repository
 {
-
     /**
      * __construct
      *
@@ -28,7 +28,7 @@ class GeneralMatchRepository extends \Neos\Flow\Persistence\Repository
     public function __construct()
     {
         parent::__construct();
-        $this->setDefaultOrderings(array('startDate' => QueryInterface::ORDER_ASCENDING));
+        $this->setDefaultOrderings(['startDate' => QueryInterface::ORDER_ASCENDING]);
     }
 
     /**
@@ -74,18 +74,18 @@ class GeneralMatchRepository extends \Neos\Flow\Persistence\Repository
         $query = $this->createQuery();
         return $query->matching(
             $query->logicalAnd(
-                    $query->logicalOr(
-                        $query->logicalAnd(
-                            $query->equals('hostTeam', $team),
-                            $query->equals('guestTeam', $otherTeam)
-                        ),
-                        $query->logicalAnd(
-                            $query->equals('guestTeam', $team),
-                            $query->equals('hostTeam', $otherTeam)
-                        )
+                $query->logicalOr(
+                    $query->logicalAnd(
+                        $query->equals('hostTeam', $team),
+                        $query->equals('guestTeam', $otherTeam)
                     ),
-                    $query->equals('cup', $cup)
-                )
+                    $query->logicalAnd(
+                        $query->equals('guestTeam', $team),
+                        $query->equals('hostTeam', $otherTeam)
+                    )
+                ),
+                $query->equals('cup', $cup)
+            )
         )
         ->execute();
     }
@@ -102,9 +102,9 @@ class GeneralMatchRepository extends \Neos\Flow\Persistence\Repository
         $query = $this->createQuery();
         return $query->matching(
             $query->logicalAnd(
-                    $query->equals('cup', $cup),
-                    $query->equals('name', $name)
-                )
+                $query->equals('cup', $cup),
+                $query->equals('name', $name)
+            )
         )
         ->execute()->getFirst();
     }
@@ -119,7 +119,7 @@ class GeneralMatchRepository extends \Neos\Flow\Persistence\Repository
     public function findLastByCup(Cup $cup, $limit = 2)
     {
         $query = $this->createQuery();
-        $query->setOrderings(array('startDate' => QueryInterface::ORDER_DESCENDING));
+        $query->setOrderings(['startDate' => QueryInterface::ORDER_DESCENDING]);
         $now = new \DateTime();
         $result = $query->setLimit($limit)->matching(
             $query->logicalAnd(

@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Command;
 
 /*                                                                        *
@@ -15,13 +16,12 @@ use Neos\Flow\Annotations as Flow;
  */
 class CupCommandController extends \Neos\Flow\Cli\CommandController
 {
-    
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\CupRepository
      */
     protected $cupRepository;
-    
+
     /**
      * list
      *

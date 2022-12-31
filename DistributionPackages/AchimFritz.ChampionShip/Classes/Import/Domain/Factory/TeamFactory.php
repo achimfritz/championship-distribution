@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip\Import\Domain\Factory;
 
 /*                                                                        *
@@ -17,7 +18,6 @@ use AchimFritz\ChampionShip\Import\Domain\Model\GeneralMatch;
  */
 class TeamFactory
 {
-
     /**
      * @Flow\Inject
      * @var \AchimFritz\ChampionShip\Competition\Domain\Repository\TeamRepository
@@ -30,7 +30,7 @@ class TeamFactory
      */
     public function createFromMatch(GeneralMatch $match)
     {
-        $teams = array();
+        $teams = [];
         $name = $match->getHomeTeam();
         $pTeam = $this->teamRepository->findOneByName($name);
         if (!$pTeam instanceof Team) {

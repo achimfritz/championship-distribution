@@ -1,4 +1,5 @@
 <?php
+
 namespace AchimFritz\ChampionShip;
 
 use Neos\Flow\Package\Package as BasePackage;
@@ -9,7 +10,6 @@ use Neos\Flow\Annotations as Flow;
  */
 class Package extends BasePackage
 {
-
     /**
      * Boot the package. We wire some signals to slots here.
      *
